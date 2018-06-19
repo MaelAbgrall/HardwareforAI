@@ -1,6 +1,30 @@
 # Deep learning Hardware
 how to choose wisely your computer
 
+##Table of content:
+- [I'm a beginner / I'm a student](https://github.com/MelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
+- [Laptop vs Cloud vs Prebuilt vs Homemade](https://github.com/MelAbgrall/HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
+	- [Laptops](https://github.com/MelAbgrall/HardwareforAI#pro-and-con-of-beefy-laptop)
+	- [Cloud computing](https://github.com/MelAbgrall/HardwareforAI#cloud-computing)
+	- [Prebuilt](https://github.com/MelAbgrall/HardwareforAI#prebuilt)
+	- [Homemade](https://github.com/MelAbgrall/HardwareforAI#homemade)
+- [The bottom-up approach: What kind of harware exist, and how to choose it](https://github.com/MelAbgrall/HardwareforAI#the-bottom-up-approach-what-kind-of-harware-exist-and-how-to-choose-it)
+	- [Why GPU are so efficient ?](https://github.com/MelAbgrall/HardwareforAI#why-gpu-are-so-efficient-)
+	- [Choosing a GPU](https://github.com/MelAbgrall/HardwareforAI#choosing-a-gpu)
+	- [Choosing a CPU](https://github.com/MelAbgrall/HardwareforAI#choosing-a-cpu)
+	- [Choosing a motherboard](https://github.com/MelAbgrall/HardwareforAI#choosing-a-motherboard)
+	- [RAM](https://github.com/MelAbgrall/HardwareforAI#ram)
+	- [Storage](https://github.com/MelAbgrall/HardwareforAI#storage)
+	- [Cooling the beast](https://github.com/MelAbgrall/HardwareforAI#cooling-the-beast)
+	- [Power Supply](https://github.com/MelAbgrall/HardwareforAI#psu)
+	- [LEDS](https://github.com/MelAbgrall/HardwareforAI#led)
+	- [Fans](https://github.com/MelAbgrall/HardwareforAI#fan)
+	- [Case](https://github.com/MelAbgrall/HardwareforAI#case)
+	- [Perifericals](https://github.com/MelAbgrall/HardwareforAI#periphericals)
+	- [OS](https://github.com/MelAbgrall/HardwareforAI#os)
+- [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
+	
+
 ## "I'm a beginner" / "I'm a student"
 you dont need a powerful computer (unless you're a gamer).
 
@@ -97,6 +121,7 @@ When you are building a deep learning focused computer, the main concern is the 
 - Memory: Less memory mean either smaller batch, or only one model at a time
 - Cores: more core = more efficient
 - Clock speed: more clock speed = more efficient
+
 **number of gpu > memory > cores > clock**
 
 Depending on the size of your datasets, you can either go with one beefy gpu or two smaller ones (or if you can afford it, two big gpu)
@@ -128,8 +153,11 @@ You should check first the generation of the cpu: newer cpu are more power effic
 	example:
 - i7 7700 is generation 7
 - i5 8600 is generation 8
+
 the performance scale is as follow:
-lesser cpu (celeron, etc) < i3 / Ryzen 3 < i5 / Ryzen 5 < i7 / Ryzen 7 < i9 / Threadripper
+	
+	lesser cpu (celeron, etc) < i3 / Ryzen 3 < i5 / Ryzen 5 < i7 / Ryzen 7 < i9 / Threadripper
+	
 Intel Xeon and AMD Athlon are special kind of cpu, usually not affordable and reserved for datacenter (lot of core, but not very fast)
 
 #### PCIE Lanes
@@ -151,8 +179,8 @@ on intel platform it's marked with a k at the end of the product name (i7 7700k 
 
 If you still want an overclockable cpu: it won't harm your computation if you don't overclock it. And you can benefit from higher factory clock speed.
 	
-	Note however:
-	overclockable 5 series are still physically less powerful than 7 series. So mind the price, sometime it's the same to buy an i5 k and a regular i7, the latest being more powerful.
+Note however:
+overclockable 5 series are still physically less powerful than 7 series. So mind the price, sometime it's the same to buy an i5 k and a regular i7, the latest being more powerful.
 
 
 ### Choosing a motherboard
@@ -290,7 +318,7 @@ If you are using linux headless, you will need at least for installation a keybo
 
 if you plan to use linux with a desktop, you will also need a mouse
 
-## OS
+### OS
 *Not windows*: some programs are not natively supported. Also the official supported OS on most libraries is linux
 
 if you don't know which linux to take, this mean you have to go with ubuntu: it's an easy os for beginers in linux. It's also the official *most* supported distro.
