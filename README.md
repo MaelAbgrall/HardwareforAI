@@ -24,7 +24,6 @@ Feel free to open an issue is there is mistakes or questions :)
 	- [Perifericals](https://github.com/MelAbgrall/HardwareforAI#periphericals)
 	- [OS](https://github.com/MelAbgrall/HardwareforAI#os)
 - [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
-	
 
 ## I'm a beginner / I'm a student
 you don't need a powerful computer (unless you're a gamer).
@@ -37,7 +36,8 @@ If you are learning computer science (and not AI especially), it is better to ha
 Before going any further, here is how I'm working with AI:
 
 - I have a small laptop with enough power to do some small computation or small software (like websites for example). It's a thinkpad x230 under Fedora, and it serve me well since 2012, it's ultra light and very small, and I'm not planning to change it anytime soon.
-
+![ ](./images/x230.jpg  "the x230 is really small")
+	*an idea of the size of the x230*
 - I have also a small tower with a beefy GPU (1080ti) for heavy computation, photoshop and gaming. I'm planning to upgrade it during summer 2018 for a dual GPU water cooled system. It's running dual boot with windows, and Fedora.
 
 When I'm not on my big computer, I'm using SSHFS and tunnels to work. It's easy to set up and it can replace easily cloud options.
@@ -108,14 +108,23 @@ GPU is a specialized piece of hardware (back in the old days, every piece of a c
 
 GPU are not really efficient for all tasks: if you need heavy computation, or a state machine with instructions that depends from the result of previous ones, CPU are still more efficient.
 GPU are somewhat good to do basic calculation.
+
 When you take ONE GPU core, it's much slower than a CPU core.
 However the incredible power of a GPU is there is a lot of core. So when you have a problem that can be parralelized (example render pixels) they are much more efficient than CPU.
+
 Deep learning tasks can be parralelized, this is why you need a GPU
+
+At last, GPU have a special kind of memory (GDDR) which is at very high speed, so comunication between the GPU & it's memory is faster than CPU <-> RAM
+
+![](./images/cpugpu.png)
 
 If you want an example: I did a training with my old x230 on MNIST. Since this laptop don't have a discrete GPU (aka a GPU separated from the CPU) it took nearly 3 day.
 On my big computer, it took 5 minutes
 
 ### Choosing a GPU
+
+![](./images/gpucore.jpg)
+
 When you are building a deep learning focused computer, the main concern is the GPU, how many ? how efficient ?
 
 3 things are important in a GPU:
@@ -140,6 +149,8 @@ Last note on GPUs:
 Going for 1 or 2 GPU is okay, if you plan to put more than 2 GPU, it will cost you much more to run it (explanation on the next part)
 
 ### Choosing a CPU
+![](./images/CPU.jpg)
+
 Choosing a CPU for AI is not the same as choosing a CPU for gaming.
 
 When you are gaming, GPU performances are bounded to the CPU ability since a lot of work is done on the CPU. When you use a less efficient CPU: the GPU is waiting for CPU instructions
@@ -168,6 +179,10 @@ Having only 16 lanes, those GPU need to divide them between the two GPU if you h
 
 If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
 if you need 4+ GPU, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those CPU are also able to fit two CPU. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
+
+The following image represent a Threadripper (64 lanes)
+
+![](./images/pcie.png)
 
 #### Overclocking
 some CPU are overclockable.
@@ -204,6 +219,11 @@ Don't worry, you can easily find the compatibility (CPU vendors are listing the 
 mind also pc configurators that are warning "this CPU is ok, but you need a bios update"
 you need two CPU for a bios update and it's kind of complicated.
 
+The image bellow is a socket
+
+![](./images/lga1156-socket.jpg)
+
+
 #### The chipset
 so, as seen on the previous point, chipset are important. There is 3 category of chipset: B, H and Z.
 
@@ -224,7 +244,7 @@ Check the supported usb version (usb 2.0, 3.0 or 3.1) it will allow you to conne
 at last, if you have no other choice than using wifi for the computer, check that the motherboard have wifi integrated, or else you will need to buy a separate expansion card or a dongle
 
 #### note on chipset lanes
-The pcie lanes of a chipset on a motherboard are not the same as the ones from the CPU. Do not sum them, it won't work.
+The pcie lanes of a chipset on a motherboard are not the same as the ones from the CPU. Do not sum them, it won't work. (remember the graphic on the threadripper)
 
 
 #### Size:
@@ -233,6 +253,10 @@ The pcie lanes of a chipset on a motherboard are not the same as the ones from t
 I do not recommand micro ITX motherboard, they are more expensive and difficult to upgrade
 
 ### RAM
+
+![](./images/ram.jpg)
+
+
 Ram is one important piece. *The minimum* Ram you should take is the same as your GPU: you need to put your dataset batch in the ram before sending it to the GPU.
 *The recommended* amount of ram is the sum of the memory on your GPUs
 
@@ -258,9 +282,17 @@ the recommendation is:
 
 - if you're on a tight budget, forget about SSD and M2. Linux is sufficiently optimized to be faster than windows on HDD.
 
+![](./images/hdd.jpg)
+
 - If you have a little bit more money you can buy a SSD, but it's around 3 times / 4 times more expensive than a HDD. Your training time will be faster however since you will load nearly instantly your dataset from storage.
 
-- M2.... hum I never used this. It's also more expansive than SSD, so I'm not very sure you need this at the moment. You can spend your money on better hardware instead.
+![](./images/ssd.jpeg)
+
+
+- M2 / NVME: This storage is even faster. However, it will eat up your pcie lanes, so not really a good choice. Spend your money on more useful hardware.
+
+![](./images/m2.jpg)
+
 
 For boot / Root of your Linux system, using a ssd is not mandatory, again, Linux is faster than windows, if you tweak it you can reduce boot time significantly (one of my teachers actually achieved to boot in less than 2 seconds).
 Expect however longer boot time if you are not using a Linux headless (Linux server).
@@ -272,11 +304,25 @@ There is three main kind of cooling available.
 
 - Air: basically you put a big chunk of aluminum on your cpu / gpu, a fan, and yaay "conduction and convection" will append
 
+![](./images/rad.jpg)
+
 - AIO (or All In One): this is water in a closed environment. It's more stylish, but not really better than air (actually some Noctua air radiator are better than AIO).
+
+![](./images/aio.jpeg)
+
+and the noctua actually better than AIO (for a better price also)
+
+![](./images/noctua.jpg)
+
+*try to put that in a laptop*
 
 - Water cooling: here is a very stylish and useful way to cool down your components: you put pipes with water in it. since water is a very good conductive, the heat will drop a lot. However, this kind of cooling require more time to set up, and maintenance at least once a year.
 
-- (other): there is other kind of cooling (like Dielectric oil, or sub phase change where you cool the CPU to -50°C) but it's very complicated. to set up, and not worth it.
+![](./images/watercooling.png)
+
+- (other): there is other kind of cooling (like Mineral oil, or phase change or nitrogen, where you cool the CPU to -50°C) but it's very complicated. to set up, and not worth it.
+
+![](./images/phase.jpeg)
 
 You can expect the following temperatures:
 Air : CPU: ~50 °C / GPU: ~75 °C
@@ -292,6 +338,9 @@ There is multiple type of PSU (power supply unit) with 3 main things to look for
 - Efficiency (80+ Bronze, silver, gold): it will indicate the efficiency of the psu. So Bronze psu will draw more power than silver ones, etc. **DO NOT TAKE A PSU WITHOUT THE 80+ LOGO**: this is an indicator of a good manufacturing. PSU without this, especially in high computation are a fire hazard.
 All brand are less or more equal (if you take a PSU with the 80+ logo)
 
+![](./images/80plus.JPG)
+
+
 - Modularity: it means you can unplug the useless cables (for example if you only have 2 hdd, you won't need the 4 cables)
 Semi modular PSU mean there is only the CPU cable that can't be unplugged
 
@@ -305,9 +354,15 @@ Care full some component are shipped with led everywhere. You will pay more for 
 Linux is not supported by default also by the manufacturers, sometimes there is drivers to control those leds, but it's not always the case...
 So don't put too much leds in you build if you want to avoid the rainbow puke ^^
 
+![](./images/rainbow.jpg)
+
+
 ### Fan
 Just make sure the fan is 3 or 4 pin.
 If you want reliable fan, you can go to Noctua, they are designing datacenter fan, and their guarantee is very good
+
+![](./images/pwm.jpg)
+
 
 ### Case
 spend the rest of your budget on a case. Make sure it is well ventilated, or your computer will become noisy.
