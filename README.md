@@ -1,12 +1,13 @@
 # Deep learning Hardware
 how to choose wisely your computer
+Feel free to open an issue is there is mistakes or questions :)
 
-##Table of content:
+## Table of content:
 - [I'm a beginner / I'm a student](https://github.com/MelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
-- [Laptop vs Cloud vs Prebuilt vs Homemade](https://github.com/MelAbgrall/HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
+- [Laptop vs Cloud vs Prebuild vs Homemade](https://github.com/MelAbgrall/HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
 	- [Laptops](https://github.com/MelAbgrall/HardwareforAI#pro-and-con-of-beefy-laptop)
 	- [Cloud computing](https://github.com/MelAbgrall/HardwareforAI#cloud-computing)
-	- [Prebuilt](https://github.com/MelAbgrall/HardwareforAI#prebuilt)
+	- [Prebuild](https://github.com/MelAbgrall/HardwareforAI#prebuild)
 	- [Homemade](https://github.com/MelAbgrall/HardwareforAI#homemade)
 - [The bottom-up approach: What kind of harware exist, and how to choose it](https://github.com/MelAbgrall/HardwareforAI#the-bottom-up-approach-what-kind-of-harware-exist-and-how-to-choose-it)
 	- [Why GPU are so efficient ?](https://github.com/MelAbgrall/HardwareforAI#why-gpu-are-so-efficient-)
@@ -25,24 +26,24 @@ how to choose wisely your computer
 - [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
 	
 
-## "I'm a beginner" / "I'm a student"
-you dont need a powerful computer (unless you're a gamer).
+## I'm a beginner / I'm a student
+you don't need a powerful computer (unless you're a gamer).
 
 There is plenty of cloud based solutions that will offer free computing power for a limited time. And even when you are out of free options, it is still a viable option.
 
-If you are learning computer science (and not AI especially), it is better to have a powerful laptop with at least an i5 and integrated gpu. It will allow you to do some small program without the need of bigger machines
+If you are learning computer science (and not AI especially), it is better to have a powerful laptop with at least an i5 and integrated GPU. It will allow you to do some small program without the need of bigger machines
 
-## Laptop vs Cloud vs Prebuilt vs Homemade
+## Laptop vs Cloud vs Prebuild vs Homemade
 Before going any further, here is how I'm working with AI:
 
 - I have a small laptop with enough power to do some small computation or small software (like websites for example). It's a thinkpad x230 under Fedora, and it serve me well since 2012, it's ultra light and very small, and I'm not planning to change it anytime soon.
 
-- I have also a small tower with a beefy gpu (1080ti) for heavy computation, photoshop and gaming. I'm planning to upgrade it during summer 2018 for a dual gpu watercooled system. It's running dual boot with windows, and Fedora.
+- I have also a small tower with a beefy GPU (1080ti) for heavy computation, photoshop and gaming. I'm planning to upgrade it during summer 2018 for a dual GPU water cooled system. It's running dual boot with windows, and Fedora.
 
-When I'm not on my big computer, I'm using SSHFS and tunels to work. It's easy to set up and it can replace easily cloud options.
+When I'm not on my big computer, I'm using SSHFS and tunnels to work. It's easy to set up and it can replace easily cloud options.
 
 #### Pro and con of beefy laptop
-Saddly, a lot of people out here recommand to get a gaming laptop for AI.
+Sadly, a lot of people out here recommend to get a gaming laptop for AI.
 
 From personal experience, it is already a somewhat bad choice for gaming, so do not expect to do heavy computation on those laptop !
 
@@ -62,18 +63,18 @@ Con:
 - Thermal overload (your computer will slow down to not literally burn, thus longer training time)
 - Really noisy
 - you can't upgrade it
-- Not the most performant / $
+- Not the best for performance / $
 
 #### Cloud computing
 Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run it's very expensive, so if you are using it daily, see the next two parts
 
 
-#### Prebuilt
-Those computer are very powerful usually. There is two type of prebuilts: the ones by big companies (Asus, MSI, etc) and the ones built by smaller professionals
+#### Pre-build
+Those computer are very powerful usually. There is two type of prebuilds: the ones by big companies (Asus, MSI, etc) and the ones built by smaller professionals
 
 Prebuilds from big companies share con with beefy laptop
 
-Other prebuild can really worth it, however you need to pay for the guys who will build it, and sometimes you can't go with some particular options.
+Other prebuilds can really worth it, however you need to pay for the guys who will build it, and sometimes you can't go with some particular options.
 
 #### Homemade
 The best option out here. You will put only what you need on your computer, this will allow a very wise usage of your money.
@@ -83,27 +84,27 @@ For those afraid of building a computer: it's not difficult (12yo children can d
 Pro:
 - Only what you need
 - You can upgrade it as hardware is evolving (you only need to change a few parts, and keep 90% of your initial build)
-- Depending the harware, it can be silent, or extremely silent
+- Depending the hardware, it can be silent, or extremely silent
 - It's very efficient, because you will never have thermal overload.
 - You can make a VERY powerful computer (aka 8 GPU)
 
 Con:
 - It's very heavy
 - It's big
-- Your electric bill might explode if you're planning an ultimate 8 gpu build (I can reassure you, for a normal sized computer like 1 / 2 gpu, it's no more than a beefy laptop)
+- Your electric bill might explode if you're planning an ultimate 8 GPU build (I can reassure you, for a normal sized computer like 1 / 2 GPU, it's no more than a beefy laptop)
 - It's more efficient than a vacuum cleaner, so you need some cleanup roughly every 3 months (it's not mandatory, but you can loose performance if it's too dusty)
 
 when you are using a homemade setup, if you are outside, you only need an internet connection and a small laptop to connect to it. You may even not need to buy a new laptop because you are probably reading this on a portable "computer" (aka something with a keyboard is enough).
-Even a chromebook will be suffisient to work.
+Even a chromebook will be sufficient to work.
 
-If you really want to buy a new laptop, there is very good linux laptops out here, Clevo notebooks are really worth it (the original AlienWare were build with Clevo notebooks), and some revendors like System 76 in the US are supporting linux
+If you really want to buy a new laptop, there is very good Linux laptops out here, Clevo notebooks are really worth it (the original AlienWare were build with Clevo notebooks), and some re-vendors like System 76 in the US are supporting Linux
 
-## The bottom-up approach: What kind of harware exist, and how to choose it
-To build a computer you will need at least a motherboard, a cpu, Ram, and stockage (HDD / SSD / M2).
-Some CPU (intel primarily) have integrated graphics. It's a very weak gpu, but it's enough for rendering a desktop environment and basic applications (Office, internet, etc)
+## The bottom-up approach: What kind of hardware exist, and how to choose it
+To build a computer you will need at least a motherboard, a CPU, Ram, and stockage (HDD / SSD / M2).
+Some CPU (Intel primarily) have integrated graphics. It's a very weak GPU, but it's enough for rendering a desktop environment and basic applications (Office, internet, etc)
 
 ### Why GPU are so efficient ?
-GPU is a specialized piece of hardware (back in the old days, every piece of a computer were plugable, so you could design a good computer by putting less or more card, like Lan card, sound card, etc. This is still the case today)
+GPU is a specialized piece of hardware (back in the old days, every piece of a computer were plug-able, so you could design a good computer by putting less or more card, like LAN card, sound card, etc. This is still the case today)
 
 GPU are not really efficient for all tasks: if you need heavy computation, or a state machine with instructions that depends from the result of previous ones, CPU are still more efficient.
 GPU are somewhat good to do basic calculation.
@@ -111,73 +112,73 @@ When you take ONE GPU core, it's much slower than a CPU core.
 However the incredible power of a GPU is there is a lot of core. So when you have a problem that can be parralelized (example render pixels) they are much more efficient than CPU.
 Deep learning tasks can be parralelized, this is why you need a GPU
 
-If you want an example: I did a training with my old x230 on MNIST. Since this laptop don't have a discrete GPU (aka a gpu separated from the CPU) it took nearly 3 day.
+If you want an example: I did a training with my old x230 on MNIST. Since this laptop don't have a discrete GPU (aka a GPU separated from the CPU) it took nearly 3 day.
 On my big computer, it took 5 minutes
 
 ### Choosing a GPU
-When you are building a deep learning focused computer, the main concern is the gpu, how many ? how efficient ?
+When you are building a deep learning focused computer, the main concern is the GPU, how many ? how efficient ?
 
-3 things are important in a gpu:
+3 things are important in a GPU:
 - Memory: Less memory mean either smaller batch, or only one model at a time
 - Cores: more core = more efficient
 - Clock speed: more clock speed = more efficient
 
-**number of gpu > memory > cores > clock**
+**number of GPU > memory > cores > clock**
 
-Depending on the size of your datasets, you can either go with one beefy gpu or two smaller ones (or if you can afford it, two big gpu)
+Depending on the size of your datasets, you can either go with one beefy GPU or two smaller ones (or if you can afford it, two big GPU)
 Training multiple model at the same time depend of your data.
 
-For example, with a titan Xp (12GB) you can train 5 Cifar datasets at the same time.
+For example, with a titan Xp (12GB) you can train 5 CIFAR datasets at the same time.
 
-some simple math to estimate roughly your gpu memory need: Batch size(int) * image size(KB/MB) = more or less the ram needed during training
+some simple math to estimate roughly your GPU memory need: Batch size(int) * image size(KB/MB) = more or less the ram needed during training
 
 Also note that previous generation hardware (ex 980ti) are also a good value, and still efficient
 
 If you are choosing between Nvidia and AMD, at the moment, Nvidia is much more advanced on AI than AMD, so there is no doubt: go for Nvidia
 
 Last note on GPUs:
-Going for 1 or 2 gpu is okay, if you plan to put more than 2 gpu, it will cost you much more to run it (explaination on the next part)
+Going for 1 or 2 GPU is okay, if you plan to put more than 2 GPU, it will cost you much more to run it (explanation on the next part)
 
 ### Choosing a CPU
-Choosing a cpu for AI is not the same as choosing a cpu for gaming.
+Choosing a CPU for AI is not the same as choosing a CPU for gaming.
 
-When you are gaming, GPU performances are bounded to the CPU ability since a lot of work is done on the CPU. When you use a less efficient cpu: the gpu is waiting for cpu instructions
+When you are gaming, GPU performances are bounded to the CPU ability since a lot of work is done on the CPU. When you use a less efficient CPU: the GPU is waiting for CPU instructions
 
-Since AI don't need the same computation, you do not have the issue of bottleneking. I still recommand at least an i5 / Ryzen 5 / equivalent
+Since AI don't need the same computation, you do not have the issue of bottleneck. I still recommend at least an i5 / Ryzen 5 / equivalent
 
 How is CPU used in AI ? Usually the CPU is used for data augmentation before sending it to the GPU.
-In the deep learning case, the slower part of the software is the training, and it's happening on the GPU. Since even the best GPU will not train as fast as a CPU can do data augmentation, you will never experience Bottleneking.
+In the deep learning case, the slower part of the software is the training, and it's happening on the GPU. Since even the best GPU will not train as fast as a CPU can do data augmentation, you will never experience bottleneck.
 
 #### the generation
-You should check first the generation of the cpu: newer cpu are more power efficient than older ones, this mean reducing the electric bill, and increase performances. Be carefull i7 i5 Ryzen 5 / 7 is not the generation, it is the performance indicator.
+You should check first the generation of the CPU: newer CPU are more power efficient than older ones, this mean reducing the electric bill, and increase performances. Be careful i7 i5 Ryzen 5 / 7 is not the generation, it is the performance indicator.
 	example:
 - i7 7700 is generation 7
 - i5 8600 is generation 8
 
 the performance scale is as follow:
 	
-	lesser cpu (celeron, etc) < i3 / Ryzen 3 < i5 / Ryzen 5 < i7 / Ryzen 7 < i9 / Threadripper
+	lesser CPU (celeron, etc) < i3 / Ryzen 3 < i5 / Ryzen 5 < i7 / Ryzen 7 < i9 / Threadripper
 	
-Intel Xeon and AMD Athlon are special kind of cpu, usually not affordable and reserved for datacenter (lot of core, but not very fast)
+Intel Xeon and AMD Athlon are special kind of CPU, usually not affordable and reserved for datacenters (lot of core, but not very fast)
 
 #### PCIE Lanes
-the number of pcie lanes. Usually CPU (5 & 7 series) will come with 16 lanes. pcie lanes are the communication pipes between the cpu and the gpu. A GPU will take maximum 16 lanes, and (for CUDA based application) minimum 8 lanes.
+the number of pcie lanes. Usually CPU (5 & 7 series) will come with 16 lanes. pcie lanes are the communication pipes between the CPU and the GPU. A GPU will take maximum 16 lanes, and (for CUDA based application) minimum 8 lanes.
 
-Having only 16 lanes, those gpu need to divide them between the two gpu if you have two. This mean a 10% decrease in performance. **It is not an issue**. 
+Having only 16 lanes, those GPU need to divide them between the two GPU if you have two. This mean a 10% decrease in performance. **It is not an issue**. 
 
-If you need to plug more gpus, you need more lanes. Be carefull though, splitting lanes is not even (for example the i7 X serie have 28 lanes. However it is splitted in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
-if you need 4+ gpu, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those cpus are also able to fit two cpu. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
+If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
+if you need 4+ GPU, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those CPU are also able to fit two CPU. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
 
 #### Overclocking
 some CPU are overclockable.
-This is a special feature for gamers: it allow overclocking your cpu. However this is a really bad idea in computation since this increase chances to have bit errors. **It's a no no.**
+This is a special feature for gamers: it allow overclocking your CPU. However this is a really bad idea in computation since this increase chances to have bit errors. **It's a no no.**
 
 in gaming this is not an issue, because bit errors are not visible.
 
 so this little feature is not really useful, you will pay for it.
-on intel platform it's marked with a k at the end of the product name (i7 7700k for example)
+on Intel platform it's marked with a k at the end of the product name (i7 7700k for example)
 
-If you still want an overclockable cpu: it won't harm your computation if you don't overclock it. And you can benefit from higher factory clock speed.
+If you still want an overclockable CPU: it won't harm your computation if you don't overclock it. And you can benefit from higher factory clock speed.
 	
 Note however:
 overclockable 5 series are still physically less powerful than 7 series. So mind the price, sometime it's the same to buy an i5 k and a regular i7, the latest being more powerful.
@@ -189,28 +190,28 @@ In the past, motherboards quality was very important. This is no longer the case
 #### compatibility
 **The most important part of choosing a motherboard:**
 
-the cpu previously choosen has something called a "socket". And motherboard have also something called a "Chipset"
+the CPU previously chose has something called a "socket". And motherboard have also something called a "Chipset"
 
 Basically the chipset is the second heart of a computer, helping the CPU for connecting with your hardware.
 
 The socket is the way of connecting your CPU to the motherboard.
 
 so you need to be very careful: some chipset (ex: 270 & 260) have the same socket (lga 1151) but they won't be compatible with their respective CPU
-(by memory, 270 is for 7 gen intel CPU, and 260 for 6th gen)
+(by memory, 270 is for 7 gen Intel CPU, and 260 for 6th gen)
 
 Don't worry, you can easily find the compatibility (CPU vendors are listing the compatible socket & chipset)
 
-mind also pc configurators that are warning "this cpu is ok, but you need a bios update"
-you need two cpu for a bios update and it's kind of complicated.
+mind also pc configurators that are warning "this CPU is ok, but you need a bios update"
+you need two CPU for a bios update and it's kind of complicated.
 
 #### The chipset
 so, as seen on the previous point, chipset are important. There is 3 category of chipset: B, H and Z.
 
 This is the "premium features".
 
-a B chipset will be ok to run a machine, the H will add a little bit more functionalities.
+a B chipset will be ok to run a machine, the H will add some more features
 
-The Z chipset is useful for oveclocking. It also has some more features, so usually you don't need it. *and please, do not buy a Z chipset and an i5... it's like buying a Ferrari and replacing the motor by a bicycle.*
+The Z chipset is useful for overclocking. It also has some more features, so usually you don't need it. *and please, do not buy a Z chipset and an i5... it's like buying a Ferrari and replacing the motor by a bicycle.*
 
 #### I/O
 check how many sata port you can have on a motherboard (more sata port = more hdd / ssd)
@@ -223,7 +224,7 @@ Check the supported usb version (usb 2.0, 3.0 or 3.1) it will allow you to conne
 at last, if you have no other choice than using wifi for the computer, check that the motherboard have wifi integrated, or else you will need to buy a separate expansion card or a dongle
 
 #### note on chipset lanes
-The pcie lanes of a chipset on a motherboard are not the same as the ones from the cpu. Do not sum them, it won't work.
+The pcie lanes of a chipset on a motherboard are not the same as the ones from the CPU. Do not sum them, it won't work.
 
 
 #### Size:
@@ -232,13 +233,13 @@ The pcie lanes of a chipset on a motherboard are not the same as the ones from t
 I do not recommand micro ITX motherboard, they are more expensive and difficult to upgrade
 
 ### RAM
-Ram is one important piece. *The minimum* Ram you should take is the same as your GPU: you need to put your dataset batch in the ram before sending it to the gpu.
-*The recommanded* amount of ram is the sum of the memory on your GPUs
+Ram is one important piece. *The minimum* Ram you should take is the same as your GPU: you need to put your dataset batch in the ram before sending it to the GPU.
+*The recommended* amount of ram is the sum of the memory on your GPUs
 
 for example:
 Titan Xp *2: (12GB effective memory)
 	- minimum: 16 GB of ram (12GB sticks doesn't exists)
-	- recommanded: 32 GB (same here, 24GB sticks does not exists)
+	- recommended: 32 GB (same here, 24GB sticks does not exists)
 	
 Current Ram prices are crazy (there is at the moment a lawsuit against manufacturers about prices agreement between them). So this is understandable to not go for the 32 GB. You can also want to upgrade your computer later... Motherboard have at least 2 places to put ram, so it's always a good move to only take half of the available ram slot, in order to be able to upgrade later.
 
@@ -253,18 +254,18 @@ HDD (hard disk drive) < SSD (solid state drive) < M2 (ss2 connected with motherb
 
 this is fun, because the price is the same.
 
-the recommandation is:
+the recommendation is:
 
-- if you're on a tight budget, forget about SSD and M2. Linux is suffisiently optimized to be faster than windows on HDD.
+- if you're on a tight budget, forget about SSD and M2. Linux is sufficiently optimized to be faster than windows on HDD.
 
 - If you have a little bit more money you can buy a SSD, but it's around 3 times / 4 times more expensive than a HDD. Your training time will be faster however since you will load nearly instantly your dataset from storage.
 
 - M2.... hum I never used this. It's also more expansive than SSD, so I'm not very sure you need this at the moment. You can spend your money on better hardware instead.
 
-For boot / Root of your linux system, using a ssd is not mandatory, again, linux is faster than windows, if you tweak it you can reduce boot time significantly (one of my teachers actually achieved to boot in less than 2 seconds).
-Expect however longer boot time if you are not using a linux headless (linux server).
+For boot / Root of your Linux system, using a ssd is not mandatory, again, Linux is faster than windows, if you tweak it you can reduce boot time significantly (one of my teachers actually achieved to boot in less than 2 seconds).
+Expect however longer boot time if you are not using a Linux headless (Linux server).
 
-It is recommanded to use a separate drive for your os / boot and one or more for your data. Linux need 50 GB of storage if you put a lot of things. You can also go with 20 GB.
+It is recommended to use a separate drive for your os / boot and one or more for your data. Linux need 50 GB of storage if you put a lot of things. You can also go with 20 GB.
 
 ### Cooling the beast
 There is three main kind of cooling available.
@@ -273,15 +274,15 @@ There is three main kind of cooling available.
 
 - AIO (or All In One): this is water in a closed environment. It's more stylish, but not really better than air (actually some Noctua air radiator are better than AIO).
 
-- Watercooling: here is a very stylish and useful way to cooldown your components: you put pipes with water in it. since water is a very good conductive, the heat will drop a lot. However, this kind of cooling require more time to set up, and maintenance at least once a year.
+- Water cooling: here is a very stylish and useful way to cool down your components: you put pipes with water in it. since water is a very good conductive, the heat will drop a lot. However, this kind of cooling require more time to set up, and maintenance at least once a year.
 
-- (other): there is other kind of cooling (like Dielectric oil, or sub phase change where you cool the cpu to -50°C) but it's very complicated. to set up, and not worth it.
+- (other): there is other kind of cooling (like Dielectric oil, or sub phase change where you cool the CPU to -50°C) but it's very complicated. to set up, and not worth it.
 
 You can expect the following temperatures:
 Air : CPU: ~50 °C / GPU: ~75 °C
-Watercooling: CPU + GPU: ~30 °C
+Water cooling: CPU + GPU: ~30 °C
 
-If you live in a hot place, watercooling / AIO can be better
+If you live in a hot place, water cooling / AIO can be better
 
 ### PSU
 we're nearly at the end !
@@ -299,7 +300,7 @@ You can find various calculators online. Be careful though, manufacturers tend t
 [HERE is a good calculator]()
 
 ### LED
-Care full some component are shipped with led everywere. You will pay more for the leds, and sometimes the hardware (especially for fans) is weaker than their concurrents without led.
+Care full some component are shipped with led everywhere. You will pay more for the leds, and sometimes the hardware (especially for fans) is weaker than tother companies without led.
 
 Linux is not supported by default also by the manufacturers, sometimes there is drivers to control those leds, but it's not always the case...
 So don't put too much leds in you build if you want to avoid the rainbow puke ^^
@@ -311,17 +312,17 @@ If you want reliable fan, you can go to Noctua, they are designing datacenter fa
 ### Case
 spend the rest of your budget on a case. Make sure it is well ventilated, or your computer will become noisy.
 
-Make sure there is enough room to put your radiators, and the motherboard. Mind also the GPU lengh.
+Make sure there is enough room to put your radiators, and the motherboard. Mind also the GPU length.
 
-### periphericals
-If you are using linux headless, you will need at least for installation a keyboard and a monitor.
+### Other
+If you are using Linux headless, you will need at least for installation a keyboard and a monitor.
 
-if you plan to use linux with a desktop, you will also need a mouse
+if you plan to use Linux with a desktop, you will also need a mouse
 
 ### OS
-*Not windows*: some programs are not natively supported. Also the official supported OS on most libraries is linux
+*Not windows*: some programs are not natively supported. Also the official supported OS on most libraries is Linux
 
-if you don't know which linux to take, this mean you have to go with ubuntu: it's an easy os for beginers in linux. It's also the official *most* supported distro.
+if you don't know which linux to take, this mean you have to go with ubuntu: it's an easy os for beginners in linux. It's also the official *most* supported distro.
 
 
 ## Youtubers to follow & useful links
