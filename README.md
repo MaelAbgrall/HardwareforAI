@@ -61,12 +61,12 @@ Con:
 - Really short lifespan (due to overheat, and smaller component)
 - During training, you won't do favors to the battery, either because it's plugged for several hours, or because it's drawing a massive amount of power
 - Thermal overload (your computer will slow down to not literally burn, thus longer training time)
-- Really noisy
+- Really noisy & hot
 - you can't upgrade it
 - Not the best for performance / $
 
 #### Cloud computing
-Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run it's very expensive, so if you are using it daily, see the next two parts
+Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run it's very expensive, so if you are using it daily, see the next two parts. Beware that this guide is intended for personal / small team use case (I'm working with 5 / 6 coworker on a xeon / 4 titan Xp server). For larger use case, this guide is not relevant!
 
 
 #### Pre-build
@@ -381,3 +381,26 @@ if you don't know which linux to take, this mean you have to go with ubuntu: it'
 
 
 ## Youtubers to follow & useful links
+[PcPartPicker:](https://pcpartpicker.com/list/) This is the most up to date database of hardware components, you can plan here a build an estimate your budget
+
+
+[Gamers Nexus:](https://www.youtube.com/user/GamersNexus) This channel is serious about harware, the team here is doing a great job for reviewing thermals of components and really technical reviews, tech news, etc
+
+Pro:
+- Channel for engineers / enthusiasts
+- Really informative and useful
+- News are also great, you can learn a lot about the hardware world
+- If you don't like videos, every thing is also [written on their website](https://www.gamersnexus.net)
+
+Con:
+- can be intimidating
+- Gamers focused, however this is not very noticeable
+
+
+Linus Tech Tips: not the best for computing, but this is the biggest tech channel on youtube with plenty of guides / review / other
+Pro:
+- Lot of content
+
+Con:
+- For gamers
+- Not very scientific
