@@ -184,9 +184,8 @@ Having only 16 lanes, those GPU need to divide them between the two GPU if you h
 If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
 if you need 4+ GPU, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those CPU are also able to fit two CPU. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
 
-The following image is two diagrams, On top there is the connections between the CPU and the "main pcie lanes" and below the chipset pcie lanes
-
-![](https://i.stack.imgur.com/9RsU4.jpg)
+The following diagram is not accurate (we will see why later), but you get the idea about GPUs
+![](./images/pcie.png)
 
 #### Overclocking
 some CPU are overclockable.
@@ -253,7 +252,11 @@ Check the supported usb version (usb 2.0, 3.0 or 3.1) it will allow you to conne
 at last, if you have no other choice than using wifi for the computer, check that the motherboard have wifi integrated, or else you will need to buy a separate expansion card or a dongle
 
 #### note on chipset lanes
-The pcie lanes of a chipset on a motherboard are not the same as the ones from the CPU. Do not sum them, it won't work. (remember the graphic on the threadripper)
+The pcie lanes of a chipset on a motherboard are not the same as the ones from the CPU. Do not sum them, it won't work.
+
+The following image is two diagrams, On top there is the connections between the CPU and the "main pcie lanes" and below the chipset pcie lanes
+
+![](https://i.stack.imgur.com/9RsU4.jpg)
 
 
 #### Size:
