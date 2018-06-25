@@ -254,7 +254,9 @@ at last, if you have no other choice than using wifi for the computer, check tha
 #### note on chipset lanes
 The pcie lanes of a chipset on a motherboard are not the same as the ones from the CPU. Do not sum them, it won't work.
 
-The following image is two diagrams, On top there is the connections between the CPU and the "main pcie lanes" and below the chipset pcie lanes
+You need to be very careful about how the motherboard connect everything if you have more than 2 GPU (remember the example of the threadripper). Depending the PCB lanes are not attributed to the CPU but the Chipset.
+
+*The following image is two diagrams, On top there is the connections between the CPU and the "main pcie lanes" and below the chipset pcie lanes.*
 
 ![](https://i.stack.imgur.com/9RsU4.jpg)
 
@@ -301,7 +303,7 @@ the recommendation is:
 ![](./images/ssd.jpeg)
 
 
-- M2 / NVME: This storage is even faster. However, it will eat up your pcie lanes, so not really a good choice. Spend your money on more useful hardware.
+- M2 / NVME: This storage is even faster. However, depending of the motherboard, it will eat up your pcie lanes, so not really a good choice. Spend your money on more useful hardware.
 
 ![](./images/m2.jpg)
 
