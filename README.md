@@ -114,7 +114,7 @@ However the incredible power of a GPU is there is a lot of core. So when you hav
 
 Deep learning tasks can be parralelized, this is why you need a GPU
 
-At last, GPU have a special kind of memory (GDDR) which is at very high speed, so comunication between the GPU & it's memory is faster than CPU <-> RAM
+At last, GPU have a special kind of memory (GDDR) which is at very high speed, so comunication between GPU <-> GDDR is faster than CPU <-> RAM
 
 ![](./images/cpugpu.png)
 
@@ -124,6 +124,8 @@ On my big computer, it took 5 minutes
 ### Choosing a GPU
 
 ![](./images/gpucore.jpg)
+
+*this square on the middle is the graphic chip. the smaller squares around it are voltage regulators (VRM) and the memory**
 
 When you are building a deep learning focused computer, the main concern is the GPU, how many ? how efficient ?
 
@@ -150,6 +152,8 @@ Going for 1 or 2 GPU is okay, if you plan to put more than 2 GPU, it will cost y
 
 ### Choosing a CPU
 ![](./images/CPU.jpg)
+
+*backside of a CPU, those little dots will connect to the socket*
 
 Choosing a CPU for AI is not the same as choosing a CPU for gaming.
 
@@ -180,7 +184,7 @@ Having only 16 lanes, those GPU need to divide them between the two GPU if you h
 If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
 if you need 4+ GPU, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those CPU are also able to fit two CPU. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
 
-The following image represent a Threadripper (64 lanes)
+The following image represent a Threadripper (64 lanes). It's not accurate, but this is the same idea (I'll update this image)
 
 ![](./images/pcie.png)
 
@@ -219,7 +223,7 @@ Don't worry, you can easily find the compatibility (CPU vendors are listing the 
 mind also pc configurators that are warning "this CPU is ok, but you need a bios update"
 you need two CPU for a bios update and it's kind of complicated.
 
-The image bellow is a socket
+*this is a socket:*
 
 ![](./images/lga1156-socket.jpg)
 
@@ -384,7 +388,7 @@ if you don't know which linux to take, this mean you have to go with ubuntu: it'
 **[PcPartPicker:](https://pcpartpicker.com/list/)** This is the most up to date database of hardware components, you can plan here a build an estimate your budget
 
 
-**[Gamers Nexus:](https://www.youtube.com/user/GamersNexus)** This channel is serious about harware, the team here is doing a great job for reviewing thermals of components and really technical reviews, tech news, etc.
+**[Gamers Nexus:](https://www.youtube.com/user/GamersNexus)** This channel is serious about harware, the team here is doing a great job for reviewing thermals of components and really technical reviews, PCB explanation, tech news, etc.
 
 Pro:
 - Channel for engineers / enthusiasts
