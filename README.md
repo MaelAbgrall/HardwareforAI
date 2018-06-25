@@ -381,10 +381,10 @@ if you don't know which linux to take, this mean you have to go with ubuntu: it'
 
 
 ## Youtubers to follow & useful links
-[PcPartPicker:](https://pcpartpicker.com/list/) This is the most up to date database of hardware components, you can plan here a build an estimate your budget
+**[PcPartPicker:](https://pcpartpicker.com/list/)** This is the most up to date database of hardware components, you can plan here a build an estimate your budget
 
 
-[Gamers Nexus:](https://www.youtube.com/user/GamersNexus) This channel is serious about harware, the team here is doing a great job for reviewing thermals of components and really technical reviews, tech news, etc
+**[Gamers Nexus:](https://www.youtube.com/user/GamersNexus)** This channel is serious about harware, the team here is doing a great job for reviewing thermals of components and really technical reviews, tech news, etc.
 
 Pro:
 - Channel for engineers / enthusiasts
@@ -397,7 +397,8 @@ Con:
 - Gamers focused, however this is not very noticeable
 
 
-Linus Tech Tips: not the best for computing, but this is the biggest tech channel on youtube with plenty of guides / review / other
+**[Linus Tech Tips:](https://www.youtube.com/user/LinusTechTips)** not the best for computing, but this is the biggest tech channel on youtube with plenty of guides / review / other
+
 Pro:
 - Lot of content
 
