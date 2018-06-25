@@ -194,13 +194,16 @@ This is a special feature for gamers: it allow overclocking your CPU. However th
 
 in gaming this is not an issue, because bit errors are not visible.
 
-so this little feature is not really useful, you will pay for it. The other downside is that you MUST take a Z motherboard (more on that later)
+so this little feature is not really useful, and you will pay for it. The other downside is that you MUST take a Z motherboard (more on that later)
+
 on Intel platform it's marked with a k at the end of the product name (i7 7700k for example)
 
 If you still want an overclockable CPU: it won't harm your computation if you don't overclock it. And you can benefit from higher factory clock speed.
 	
 Note however:
-**overclockable 5 series are still physically less powerful than 7 series. So mind the price, sometime it's the same or more expensive to buy an i5 unlocked + compatible motherboard than a regular i7 + cheapest motherboard, the latest being more powerful. I do not recommend to buy an unlocked i5, it is not worth the price!*
+**overclockable 5 series are still physically less powerful than 7 series. It's the same or more expensive to buy an i5 unlocked + compatible motherboard than a regular i7 + cheapest motherboard, the latest being more powerful.**
+
+*I do not recommend to buy an unlocked i5, it is not worth the price!*
 
 
 ### Choosing a motherboard
@@ -231,11 +234,11 @@ you need two CPU for a bios update and it's kind of complicated.
 #### The chipset
 so, as seen on the previous point, chipset are important. There is 3 category of chipset: B, H and Z.
 
-This is the "premium features".
+The build quality of those motherboard is nearly the same, the only thing that change is how everything is connected on the PCB and the number / quality of the features (Integrated audio chip, Wifi, Usb ports, etc)
 
-a B chipset will be ok to run a machine, the H will add some more features
+a B chipset will be ok to run a machine, this is an entry level motherboard, usually around 40/50$, the H will add some features, but this is still a cheap and viable option. Usually those motherboard have good audio chip and integrated wifi.
 
-The Z chipset is used only on premium motherboard, it is useful for overclocking. It also has some more features, so usually you don't need it. this also mean those motherboard are more expensive.
+The Z chipset is used only on premium motherboard, it is useful for overclocking. It also has some more features/better quality for audio chip/etc, so usually you don't need it. this also mean those motherboard are more expensive (starting at least at 150$)
 
 *and please, do not buy a Z chipset and an i5... it's like buying a Ferrari and replacing the motor with an overpriced bicycle.*
 
@@ -271,7 +274,7 @@ Titan Xp *2: (12GB effective memory)
 	- minimum: 16 GB of ram (12GB sticks doesn't exists)
 	- recommended: 32 GB (same here, 24GB sticks does not exists)
 	
-Current Ram prices are crazy (there is at the moment a lawsuit against manufacturers about prices agreement between them). So this is understandable to not go for the 32 GB. You can also want to upgrade your computer later... Motherboard have at least 2 places to put ram, so it's always a good move to only take half of the available ram slot, in order to be able to upgrade later.
+Current Ram prices are crazy (there is at the moment a lawsuit against manufacturers about prices agreement between them). So this is understandable to not go for the 32 GB. Same if you want to upgrade your computer later... Motherboard have at least 2 places to put ram, so it's always a good move to only take half of the available ram slot, in order to be able to upgrade later.
 
 Check at last their frequency: some ram can go really fast (3200Hz +) but the downside is that it's not supported by the motherboard (as for the CPU, you can easily find the maximum ram speed for every motherboard on the specs / datasheet)
 
