@@ -125,7 +125,7 @@ On my big computer, it took 5 minutes
 
 ![](./images/gpucore.jpg)
 
-*this square on the middle is the graphic chip. the smaller squares around it are voltage regulators (VRM) and the memory**
+*this square on the middle is the graphic chip. the smaller squares around it are voltage regulators (VRM) and the memory*
 
 When you are building a deep learning focused computer, the main concern is the GPU, how many ? how efficient ?
 
@@ -194,13 +194,13 @@ This is a special feature for gamers: it allow overclocking your CPU. However th
 
 in gaming this is not an issue, because bit errors are not visible.
 
-so this little feature is not really useful, you will pay for it.
+so this little feature is not really useful, you will pay for it. The other downside is that you MUST take a Z motherboard (more on that later)
 on Intel platform it's marked with a k at the end of the product name (i7 7700k for example)
 
 If you still want an overclockable CPU: it won't harm your computation if you don't overclock it. And you can benefit from higher factory clock speed.
 	
 Note however:
-overclockable 5 series are still physically less powerful than 7 series. So mind the price, sometime it's the same to buy an i5 k and a regular i7, the latest being more powerful.
+**overclockable 5 series are still physically less powerful than 7 series. So mind the price, sometime it's the same or more expensive to buy an i5 unlocked + compatible motherboard than a regular i7 + cheapest motherboard, the latest being more powerful. I do not recommend to buy an unlocked i5, it is not worth the price!*
 
 
 ### Choosing a motherboard
@@ -235,7 +235,9 @@ This is the "premium features".
 
 a B chipset will be ok to run a machine, the H will add some more features
 
-The Z chipset is useful for overclocking. It also has some more features, so usually you don't need it. *and please, do not buy a Z chipset and an i5... it's like buying a Ferrari and replacing the motor by a bicycle.*
+The Z chipset is used only on premium motherboard, it is useful for overclocking. It also has some more features, so usually you don't need it. this also mean those motherboard are more expensive.
+
+*and please, do not buy a Z chipset and an i5... it's like buying a Ferrari and replacing the motor with an overpriced bicycle.*
 
 #### I/O
 check how many sata port you can have on a motherboard (more sata port = more hdd / ssd)
