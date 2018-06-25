@@ -184,9 +184,9 @@ Having only 16 lanes, those GPU need to divide them between the two GPU if you h
 If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
 if you need 4+ GPU, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those CPU are also able to fit two CPU. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
 
-The following image represent a Threadripper (64 lanes). It's not accurate, but this is the same idea (I'll update this image)
+The following image is two diagrams, On top there is the connections between the CPU and the "main pcie lanes" and below the chipset pcie lanes
 
-![](./images/pcie.png)
+![](https://i.stack.imgur.com/9RsU4.jpg)
 
 #### Overclocking
 some CPU are overclockable.
@@ -374,8 +374,6 @@ Just make sure the fan is 3 or 4 pin. (DC or PWM)
 - PWM mean that the current pin will carry alway 12V, and the PWM pin send and receive the fan speed in RPM.
 
 If you want reliable fan, you can go to Noctua, they are designing datacenter fan, and their guarantee is very good
-
-![](./images/pwm.jpg)
 
 ### Case
 spend the rest of your budget on a case. Make sure it is well ventilated, or your computer will become noisy. This is kind of easy to spot (open front and open top since heat goes up). A recent trend was to put glass panel everywere, so mind some cases that put a giant glass in front of the fan, thus making them useless.
