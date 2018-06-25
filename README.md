@@ -358,23 +358,27 @@ You can find various calculators online. Be careful though, manufacturers tend t
 [HERE is a good calculator]()
 
 ### LED
-Care full some component are shipped with led everywhere. You will pay more for the leds, and sometimes the hardware (especially for fans) is weaker than tother companies without led.
+Careful some component are shipped with led everywhere. As for all trends, you will pay more for the leds, and sometimes the hardware (especially for fans) is weaker than other companies without led.
 
-Linux is not supported by default also by the manufacturers, sometimes there is drivers to control those leds, but it's not always the case...
+This is important to know that 90% of gamers are using Windows and not linux. So most of the software required to personalise / unify colors are not supported by the manufacturers on linux. You can find some open source tools to control those leds (Razer for example), but it's not always the case...
+
 So don't put too much leds in you build if you want to avoid the rainbow puke ^^
 
 ![](./images/rainbow.jpg)
 
 
 ### Fan
-Just make sure the fan is 3 or 4 pin.
+Just make sure the fan is 3 or 4 pin. (DC or PWM)
+
+- DC mean the fan's motor will run more or less fast depending on the voltage given to the fan.
+- PWM mean that the current pin will carry alway 12V, and the PWM pin send and receive the fan speed in RPM.
+
 If you want reliable fan, you can go to Noctua, they are designing datacenter fan, and their guarantee is very good
 
 ![](./images/pwm.jpg)
 
-
 ### Case
-spend the rest of your budget on a case. Make sure it is well ventilated, or your computer will become noisy.
+spend the rest of your budget on a case. Make sure it is well ventilated, or your computer will become noisy. This is kind of easy to spot (open front and open top since heat goes up). A recent trend was to put glass panel everywere, so mind some cases that put a giant glass in front of the fan, thus making them useless.
 
 Make sure there is enough room to put your radiators, and the motherboard. Mind also the GPU length.
 
