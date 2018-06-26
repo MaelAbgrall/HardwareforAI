@@ -1,6 +1,7 @@
 # Deep learning Hardware
-how to choose wisely your computer
-Feel free to open an issue is there is mistakes or questions :)
+This guide is intended for beginers in hardware, in order to plan what you need and how to choose parts for a computer specialized in Deep Learning.
+
+Feel free to open an issue is there is any mistakes or any questions :)
 
 ## Table of content:
 - [I'm a beginner / I'm a student](https://github.com/MelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
@@ -21,7 +22,7 @@ Feel free to open an issue is there is mistakes or questions :)
 	- [LEDS](https://github.com/MelAbgrall/HardwareforAI#led)
 	- [Fans](https://github.com/MelAbgrall/HardwareforAI#fan)
 	- [Case](https://github.com/MelAbgrall/HardwareforAI#case)
-	- [Perifericals](https://github.com/MelAbgrall/HardwareforAI#periphericals)
+	- [Other](https://github.com/MelAbgrall/HardwareforAI#other)
 	- [OS](https://github.com/MelAbgrall/HardwareforAI#os)
 - [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
 
