@@ -3,6 +3,8 @@ This guide is intended for beginers in hardware, in order to plan what you need 
 
 Feel free to open an issue is there is any mistakes or any questions :)
 
+note: I've build more than 10 "computers" and owned twice as much for lots of usages (HTPC, gaming, ultralight computer, servers, IOT device, etc), so this guide is reliable.
+
 ## Table of content:
 - [I'm a beginner / I'm a student](https://github.com/MelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
 - [Laptop vs Cloud vs Prebuild vs Homemade](https://github.com/MelAbgrall/HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
