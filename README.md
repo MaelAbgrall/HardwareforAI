@@ -3,7 +3,7 @@ This guide is intended for beginers in hardware, in order to plan what you need 
 
 Feel free to open an issue is there is any mistakes or any questions :)
 
-**note:** I've built more than 10 computers and owned twice as much for lots of usages (HTPC, gaming, ultralight, servers, IOT device, etc), I'm also a huge fan of computer hardware, so this guide is definitely reliable.
+**note:** I've built more than 10 computers and owned twice as much for lots of usages (HTPC, gaming, ultralight, servers, IOT device, etc), I'm also a huge fan of computer hardware, so this guide is **definitely reliable**.
 
 ## Table of content:
 - [I'm a beginner / I'm a student](https://github.com/MelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
