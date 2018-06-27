@@ -278,8 +278,11 @@ Ram is one important piece. *The minimum* Ram you should take is the same as you
 *The recommended* amount of ram is the sum of the memory on your GPUs
 
 for example:
+
 Titan Xp *2: (12GB effective memory)
+
 	- minimum: 16 GB of ram (12GB sticks doesn't exists)
+
 	- recommended: 32 GB (same here, 24GB sticks does not exists)
 	
 Current Ram prices are crazy (there is at the moment a lawsuit against manufacturers about prices agreement between them). So this is understandable to not go for the 32 GB. Same if you want to upgrade your computer later... Motherboard have at least 2 places to put ram, so it's always a good move to only take half of the available ram slot, in order to be able to upgrade later.
@@ -323,29 +326,29 @@ There is three main kind of cooling available.
 
 ![](./images/rad.jpg)
 
-- AIO (or All In One): this is water in a closed environment. It's more stylish, but not really better than air (actually some Noctua air radiator are better than AIO).
+- AIO (or All In One): this is water in a closed environment. It's more stylish, but it come at a high price.
 
 ![](./images/aio.jpeg)
-
-and the noctua actually better than AIO (for a better price also)
-
-![](./images/noctua.jpg)
-
-*try to put that in a laptop*
 
 - Water cooling: here is a very stylish and useful way to cool down your components: you put pipes with water in it. since water is a very good conductive, the heat will drop a lot. However, this kind of cooling require more time to set up, and maintenance at least once a year.
 
 ![](./images/watercooling.png)
 
-- (other): there is other kind of cooling (like Mineral oil, or phase change or nitrogen, where you cool the CPU to -50°C) but it's very complicated. to set up, and not worth it.
+- (other): there is other kind of cooling (like Mineral oil, or phase change or nitrogen, where you cool the CPU to -50°C) . Those kind of cooling are awesome for engineering enthusiasts, and are used usually for crazy benchmarking. However, it's very complicated to set up, and clearly not worth it for deep learning.
 
 ![](./images/phase.jpeg)
+
+And just a side note: There is one cooler to rule them all: the Noctua NH-D15 is an absolute beast to cool down cpu. This air cooler is actually better than liquid cooling. The advantage is that this high end cooler is still cheaper than entry level AIO, and much quieter (you can turn the fan off most of the time, because the aluminum part is so massive, natural heat dissipation will be enough). It's big, but the next gen (in a couple of month) will be much smaller.
+
+![](./images/noctua.jpg)
+
+*try to put that in a laptop*
+
+As a general advice, some of the latest air cooled GPU are also very good at keeping the temperature down even with multiple GPU. I do not recommend to go watercooling for your first build, this is a little bit harder to set up than a regular pc and only useful if you're annoyed by noise. If you're living in a relatively hot place (aka ~35°C or more) you should put AIO for better temperatures. There is fittings to put AIO on GPU as well
 
 You can expect the following temperatures:
 Air : CPU: ~50 °C / GPU: ~75 °C
 Water cooling: CPU + GPU: ~30 °C
-
-If you live in a hot place, water cooling / AIO can be better
 
 ### PSU
 we're nearly at the end !
