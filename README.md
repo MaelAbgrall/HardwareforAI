@@ -28,6 +28,12 @@ Feel free to open an issue is there is any mistakes or any questions :)
 	- [OS](https://github.com/MelAbgrall/HardwareforAI#os)
 - [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
 
+## TODO list:
+	- Building guide
+	- Link for wattage calculators
+	- Deep learning asic & embedded chips
+	- Resize images & better diagrams
+
 ## I'm a beginner / I'm a student
 you don't need a powerful computer (unless you're a gamer).
 
