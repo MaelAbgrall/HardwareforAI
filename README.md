@@ -138,10 +138,16 @@ On my big computer, it took 5 minutes
 
 When you are building a deep learning focused computer, the main concern is the GPU, how many ? how efficient ?
 
-3 things are important in a GPU:
+2 things are important in a GPU:
 - Memory: Less memory mean either smaller batch, or only one model at a time
-- Cores: more core = more efficient
-- Clock speed: more clock speed = more efficient
+- Processing power (in GFLOPs): this is the number of operation per second
+
+Processing power is usually constrained by the number of cuda cores, clock speed and GDDR bandwidth.
+
+You can find all nvidia's gpu datasheet [here for 9xx series](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units#GeForce_900_series) and [here for the 10xx series](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units#GeForce_10_series)
+
+of course, is you can afford one, the Titan V is well above the other cards.
+
 
 **number of GPU > memory > cores > clock**
 
@@ -213,6 +219,16 @@ Note however:
 
 *I do not recommend to buy an unlocked i5, it is not worth the price!*
 
+#### General knowledge about CPU / good to know
+CPU are mainly divided in two categories: ARM chip that are present in most of the small 'computers' like phone of embedded systems, and x86 chips. 
+
+x86 is an instruction set developed by intel and (if I remember correctly) only used by rare allowed companies such as AMD. There is at the moment (June 2018) some pressure about this between Qualcomm and Intel about emulating this instruction set.
+
+Basically: 
+
+- ARM is an open design, usually (not all the time) more power efficient.
+
+- x86 is not open, and usually outperform ARM.
 
 ### Choosing a motherboard
 In the past, motherboards quality was very important. This is no longer the case. You still need to check some things
@@ -407,6 +423,22 @@ if you plan to use Linux with a desktop, you will also need a mouse
 
 if you don't know which linux to take, this mean you have to go with ubuntu: it's an easy os for beginners in linux. It's also the official *most* supported distro.
 
+## ASICS & SOC (embedded systems)
+Asic or Application Specific Integrated Circuit are processors redesigned for a specific task. The most known are Bitcoin mining asic that are very efficient for mining.
+
+The purpose of those processors is to provide good or above average performance with a reduced consumption.
+
+An example of ASIC for AI is Intel Nervana or Google TPU  (some core inside the Nvidia Titan V are also ASICs)
+
+[edit: I found a cool list of asic here](https://basicmi.github.io/Deep-Learning-Processor-List/)
+
+There is also embedded systems available (SOC or System on a Chip, like raspberry pi)
+
+- the Nvidia Jestson
+
+- An intel NPU
+
+- ...
 
 ## Youtubers to follow & useful links
 **[PcPartPicker:](https://pcpartpicker.com/list/)** This is the most up to date database of hardware components, you can plan here a build an estimate your budget
