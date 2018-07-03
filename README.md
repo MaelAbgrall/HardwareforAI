@@ -26,6 +26,7 @@ Feel free to open an issue is there is any mistakes or any questions :)
 	- [Case](https://github.com/MelAbgrall/HardwareforAI#case)
 	- [Other](https://github.com/MelAbgrall/HardwareforAI#other)
 	- [OS](https://github.com/MelAbgrall/HardwareforAI#os)
+- [ASIC & SOC / Embedded systems](https://github.com/MelAbgrall/HardwareforAI#asics--soc-embedded-systems)
 - [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
 
 ## TODO list:
