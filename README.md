@@ -403,7 +403,7 @@ Careful some component are shipped with led everywhere. As for all trends and ga
 
 This is important to know that 90% of gamers are using Windows and not linux. So most of the software required to personalise / unify colors are not supported by the manufacturers on linux. There is still open-source software to deal with it (I've found some things for Razer, MSI, and it seems that gigabyte is using a bios setup for leds, thus not needing windows). Some component will be able to stay on a specified color if you have a dual boot with windows (you can then choose the color of all the leds and restart the computer on linux).
 
-When leds are not set up, they will usually light up with a specific color and pattern (how they glow, switch on or off, etc). The less funny part is that when you can't set up all those leds to switch on at the same time and the same color, it can turn your computer into an *-ugly-* rainbow.
+When leds are not set up, they will usually light up with a specific color and pattern (how they glow, switch on or off, etc). The less funny part is that when you can't set up all those leds to switch on at the same time and the same color, it can turn your computer into an *-ugly-* stroboscopic rainbow.
 
 The easiest way is to no put too much leds in you build or a static unicolored hardware^^
 
