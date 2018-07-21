@@ -149,13 +149,16 @@ You can find all nvidia's gpu datasheet [here for 9xx series](https://en.wikiped
 
 of course, is you can afford one, the Titan V is well above the other cards.
 
+Depending on the size of your datasets and the number of experiment you need to conduct at the same time, you can either go with one beefy GPU or two smaller ones (or if you can afford it, two big GPU).
+	
+	Since you can upgrade your computer later, a tight budget choice would be to use everytime two gpu: one powerful and one less powerful / older. 
+	
+	- You will be able to train multiple models at the same time on both cards for testing, and use the most powerful for more longer training. 
+	- you will also be able later to upgrade only one gpu at a time (always change the older when buying new hardware)
+	
+	*note*: I'm not sure you can play video games on this kind of setup, however for computation it is fine to have two, three, four or more different cards on the same computer
 
-**number of GPU > memory > cores > clock**
-
-Depending on the size of your datasets, you can either go with one beefy GPU or two smaller ones (or if you can afford it, two big GPU)
-Training multiple model at the same time depend of your data.
-
-For example, with a titan Xp (12GB) you can train 5 CIFAR datasets at the same time.
+For example, with a titan Xp (12GB) you can train 5 CIFAR datasets at the same time with batches of 500 images.
 
 some simple math to estimate roughly your GPU memory need: Batch size(int) * image size(KB/MB) = more or less the ram needed during training
 
@@ -239,9 +242,9 @@ In the past, motherboards quality was very important. This is no longer the case
 
 the CPU previously chose has something called a "socket". And motherboard have also something called a "Chipset"
 
-Basically the chipset is the second heart of a computer, helping the CPU for connecting with your hardware.
+	The chipset is the second heart of a computer, helping the CPU for connecting with your hardware.
 
-The socket is the way of connecting your CPU to the motherboard.
+	The socket is the way of connecting your CPU to the motherboard.
 
 so you need to be very careful: some chipset (ex: 270 & 260) have the same socket (lga 1151) but they won't be compatible with their respective CPU
 (by memory, 270 is for 7 gen Intel CPU, and 260 for 6th gen)
@@ -257,7 +260,7 @@ you need two CPU for a bios update and it's kind of complicated.
 
 
 #### The chipset
-so, as seen on the previous point, chipset are important. There is 3 category of chipset: B, H and Z.
+so, as seen on the previous point, chipset are important. There is 3 category of chipset (on intel though): B, H and Z.
 
 The build quality of those motherboard is nearly the same, the only thing that change is how everything is connected on the PCB and the number / quality of the features (Integrated audio chip, Wifi, Usb ports, etc)
 
@@ -288,9 +291,13 @@ You need to be very careful about how the motherboard connect everything if you 
 
 
 #### Size:
-2 main types of motherboard size exist: ATX and micro ATX (E-ATX also, but not seen very often)
+There is multiple size of motherboard: mini ITX (smallest), micro ATX (medium), ATX (large), E-ATX (extra large) and other bigger MB (usually two socked xeon or epyc motherboard)
 
-I do not recommand micro ITX motherboard, they are more expensive and difficult to upgrade
+- Prices tend to be a little bit cheaper for micro ATX versus ATX. However you will not be able to put more than 2 GPU.
+
+- I do not recommand micro ITX motherboard, they are more expensive and difficult to upgrade.
+
+- For bigger Motherboard (E-ATX and beyond), you need to be carefull, this is not an usual form factor, so there will be less choice for choosing a case later.
 
 ### RAM
 
@@ -389,14 +396,16 @@ Semi modular PSU mean there is only the CPU cable that can't be unplugged
 
 - Wattage: This is the maximum amount of watt the psu will provide.
 You can find various calculators online. Be careful though, manufacturers tend to increase the wattage needed to sell more expansive psu (so don't use the manufacturers tools)
-[HERE is a good calculator]()
+[HERE is a good calculator](https://outervision.com/power-supply-calculator)
 
 ### LED
-Careful some component are shipped with led everywhere. As for all trends, you will pay more for the leds, and sometimes the hardware (especially for fans) is weaker than other companies without led.
+Careful some component are shipped with led everywhere. As for all trends and gadgets, you will pay more for the leds, and sometimes the hardware (especially for fans) is weaker than other companies without led.
 
-This is important to know that 90% of gamers are using Windows and not linux. So most of the software required to personalise / unify colors are not supported by the manufacturers on linux. You can find some open source tools to control those leds (Razer for example), but it's not always the case...
+This is important to know that 90% of gamers are using Windows and not linux. So most of the software required to personalise / unify colors are not supported by the manufacturers on linux. There is still open-source software to deal with it (I've found some things for Razer, MSI, and it seems that gigabyte is using a bios setup for leds, thus not needing windows). Some component will be able to stay on a specified color if you have a dual boot with windows (you can then choose the color of all the leds and restart the computer on linux).
 
-So don't put too much leds in you build if you want to avoid the rainbow puke ^^
+When leds are not set up, they will usually light up with a specific color and pattern (how they glow, switch on or off, etc). The less funny part is that when you can't set up all those leds to switch on at the same time and the same color, it can turn your computer into an *-ugly-* rainbow.
+
+The easiest way is to no put too much leds in you build or a static unicolored hardware^^
 
 ![](./images/rainbow.jpg)
 
