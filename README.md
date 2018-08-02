@@ -481,11 +481,20 @@ Con:
 - Gamers focused, however this is not very noticeable
 
 
-**[Linus Tech Tips:](https://www.youtube.com/user/LinusTechTips)** not the best for computing, but this is the biggest tech channel on youtube with plenty of guides / review / other
+**[Level one Tech:](https://level1techs.com)** I recently found this hardware blog. It's oriented on linux for workstation and gaming
 
-Pro:
-- Lot of content
+**/r:** Subreddits, don't hesitate to ask questions: this is not a gamer only forum. Beware tough (same for all sub) there is some fanboys with biased opinions.
 
-Con:
-- For gamers
-- Not very scientific
+-[/r Intel](https://www.reddit.com/r/intel/)
+
+-[/r AMD](https://www.reddit.com/r/Amd/)
+
+-[/r Build a pc](https://www.reddit.com/r/buildapc/) General advice
+
+-[/r hardware](https://www.reddit.com/r/hardware/) General advice (not only computer related)
+
+-[/r Nvidia](https://www.reddit.com/r/nvidia/)
+
+-[/r PC Master Race](https://www.reddit.com/r/pcmasterrace/) General advice on powerful computers
+
+-[/r Linux master race](https://www.reddit.com/r/linuxmasterrace/)
