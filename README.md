@@ -6,28 +6,28 @@ Feel free to open an issue is there is any mistakes or any questions :)
 **note: I've built more than 10 computers and owned twice as much for lots of usages (HTPC, gaming, ultralight, servers, IOT device, etc), I'm also a huge fan of computer hardware, so I guess this guide is reliable ^^**.
 
 ## Table of content:
-- [I'm a beginner / I'm a student](https://github.com/MelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
-- [Laptop vs Cloud vs Prebuild vs Homemade](https://github.com/MelAbgrall/HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
-	- [Laptops](https://github.com/MelAbgrall/HardwareforAI#pro-and-con-of-beefy-laptop)
-	- [Cloud computing](https://github.com/MelAbgrall/HardwareforAI#cloud-computing)
-	- [Prebuild](https://github.com/MelAbgrall/HardwareforAI#prebuild)
-	- [Homemade](https://github.com/MelAbgrall/HardwareforAI#homemade)
-- [The bottom-up approach: What kind of harware exist, and how to choose it](https://github.com/MelAbgrall/HardwareforAI#the-bottom-up-approach-what-kind-of-harware-exist-and-how-to-choose-it)
-	- [Why GPU are so efficient ?](https://github.com/MelAbgrall/HardwareforAI#why-gpu-are-so-efficient-)
-	- [Choosing a GPU](https://github.com/MelAbgrall/HardwareforAI#choosing-a-gpu)
-	- [Choosing a CPU](https://github.com/MelAbgrall/HardwareforAI#choosing-a-cpu)
-	- [Choosing a motherboard](https://github.com/MelAbgrall/HardwareforAI#choosing-a-motherboard)
-	- [RAM](https://github.com/MelAbgrall/HardwareforAI#ram)
-	- [Storage](https://github.com/MelAbgrall/HardwareforAI#storage)
-	- [Cooling the beast](https://github.com/MelAbgrall/HardwareforAI#cooling-the-beast)
-	- [Power Supply](https://github.com/MelAbgrall/HardwareforAI#psu)
-	- [LEDS](https://github.com/MelAbgrall/HardwareforAI#led)
-	- [Fans](https://github.com/MelAbgrall/HardwareforAI#fan)
-	- [Case](https://github.com/MelAbgrall/HardwareforAI#case)
-	- [Other](https://github.com/MelAbgrall/HardwareforAI#other)
-	- [OS](https://github.com/MelAbgrall/HardwareforAI#os)
-- [ASIC & SOC / Embedded systems](https://github.com/MelAbgrall/HardwareforAI#asics--soc-embedded-systems)
-- [Youtubers to follow & Useful links](https://github.com/MelAbgrall/HardwareforAI#youtubers-to-follow--useful-links)
+- [I'm a beginner / I'm a student](./HardwareforAI#im-a-beginner--im-a-student)
+- [Laptop vs Cloud vs Prebuild vs Homemade](./HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
+	- [Laptops](./HardwareforAI#pro-and-con-of-beefy-laptop)
+	- [Cloud computing](./HardwareforAI#cloud-computing)
+	- [Prebuild](./HardwareforAI#prebuild)
+	- [Homemade](.HardwareforAI#homemade)
+- [The bottom-up approach: What kind of harware exist, and how to choose it](./HardwareforAI#the-bottom-up-approach-what-kind-of-harware-exist-and-how-to-choose-it)
+	- [Why GPU are so efficient ?](./HardwareforAI#why-gpu-are-so-efficient-)
+	- [Choosing a GPU](./HardwareforAI#choosing-a-gpu)
+	- [Choosing a CPU](./HardwareforAI#choosing-a-cpu)
+	- [Choosing a motherboard](./HardwareforAI#choosing-a-motherboard)
+	- [RAM](./HardwareforAI#ram)
+	- [Storage](./HardwareforAI#storage)
+	- [Cooling the beast](./HardwareforAI#cooling-the-beast)
+	- [Power Supply](./HardwareforAI#psu)
+	- [LEDS](./HardwareforAI#led)
+	- [Fans](./HardwareforAI#fan)
+	- [Case](./HardwareforAI#case)
+	- [Other](./HardwareforAI#other)
+	- [OS](./HardwareforAI#os)
+- [ASIC & SOC / Embedded systems](./HardwareforAI#asics--soc-embedded-systems)
+- [Youtubers to follow & Useful links](./HardwareforAI#youtubers-to-follow--useful-links)
 
 ## TODO list:
 	- Building guide
@@ -76,8 +76,19 @@ Con:
 - Not the best for performance / $
 
 #### Cloud computing
-Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run it's very expensive, so if you are using it daily, see the next two parts. Beware that this guide is intended for personal / small team use case (I'm working with 5 / 6 coworker on a xeon / 4 titan Xp server). For larger use case, this guide is not relevant!
+Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run it's very expensive, so if you are using it daily, see the next two parts.
 
+**Beware that this guide is intended for personal / small team use case (I'm working with 5 / 6 coworker on a xeon / 4 titan Xp server). For larger use case (team of 20+ peoples), this guide is not relevant!**
+
+**For companies (start up and small ones)**, on case you didn't know, the most intensive part about AI is training a model. This is when you need a big computer with really powerful hardware. During prediction (for example when used by an end-user) the amazing thing is that you don't need powerful computers (yes, you can run a model on a mobile phone). So, again, for a small/medium team, building your own computer is the most affordable case in the long run (>1y, do not use a DIY for a MVP). Since it's also a server not designed for usage by end user (so no website hosting on it) you can very easily protect it and maintain it (just put it in a LAN/VLAN, and deny any connection from outside the building)
+
+pro:
+- no need for maintenance (you can start a training in less than 15min)
+- access to pro-level hardware for cheap
+- easily scalable for large teams
+
+con:
+- very expensive if you use it daily
 
 #### Pre-build
 Those computer are very powerful usually. There is two type of prebuilds: the ones by big companies (Asus, MSI, etc) and the ones built by smaller professionals
@@ -101,7 +112,6 @@ Pro:
 Con:
 - It's very heavy
 - It's big
-- Your electric bill might explode if you're planning an ultimate 8 GPU build (I can reassure you, for a normal sized computer like 1 / 2 GPU, it's no more than a beefy laptop)
 - It's more efficient than a vacuum cleaner, so you need some cleanup roughly every 3 months (it's not mandatory, but you can loose performance if it's too dusty)
 
 when you are using a homemade setup, if you are outside, you only need an internet connection and a small laptop to connect to it. You may even not need to buy a new laptop because you are probably reading this on a portable "computer" (aka something with a keyboard is enough).
@@ -139,7 +149,7 @@ On my big computer, it took 5 minutes
 
 When you are building a deep learning focused computer, the main concern is the GPU, how many ? how efficient ?
 
-2 things are important in a GPU:
+2 things are important in a GPU (the more, the better):
 - Memory: Less memory mean either smaller batch, or only one model at a time
 - Processing power (in GFLOPs): this is the number of operation per second
 
@@ -147,7 +157,7 @@ Processing power is usually constrained by the number of cuda cores, clock speed
 
 You can find all nvidia's gpu datasheet [here for 9xx series](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units#GeForce_900_series) and [here for the 10xx series](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units#GeForce_10_series)
 
-of course, is you can afford one, the Titan V is well above the other cards.
+of course, is you can afford one, the Titan V is well above the other cards in term of processing power.
 
 Depending on the size of your datasets and the number of experiment you need to conduct at the same time, you can either go with one beefy GPU or two smaller ones (or if you can afford it, two big GPU).
 	
@@ -183,6 +193,10 @@ Since AI don't need the same computation, you do not have the issue of bottlenec
 How is CPU used in AI ? Usually the CPU is used for data augmentation before sending it to the GPU.
 In the deep learning case, the slower part of the software is the training, and it's happening on the GPU. Since even the best GPU will not train as fast as a CPU can do data augmentation, you will never experience bottleneck.
 
+#### Number of core
+the number of core in a CPU is not very relevant for AI, it is interesting to have more than 2 cores for prepairing batches of data. Unless you use very heavy multi-threaded pre-processing or if there is multiple users on the same computer, the need of more than 4 cores is not relevant (it is still better to search for a fast CPU than a huge number of cores).
+If you plan to use >=3 GPU, nearly all CPU that can handle this have more than 8 cores
+
 #### the generation
 You should check first the generation of the CPU: newer CPU are more power efficient than older ones, this mean reducing the electric bill, and increase performances. Be careful i7 i5 Ryzen 5 / 7 is not the generation, it is the performance indicator.
 	example:
@@ -193,12 +207,12 @@ the performance scale is as follow:
 	
 	lesser CPU (celeron, etc) < i3 / Ryzen 3 < i5 / Ryzen 5 < i7 / Ryzen 7 < i9 / Threadripper
 	
-Intel Xeon and AMD Athlon are special kind of CPU, usually not affordable and reserved for datacenters (lot of core, but not very fast)
+Intel Xeon and AMD Athlon/Epyc are special kind of CPU, usually not affordable and reserved for datacenters (lot of core, but not very fast)
 
 #### PCIE Lanes
 the number of pcie lanes. Usually CPU (5 & 7 series) will come with 16 lanes. pcie lanes are the communication pipes between the CPU and the GPU. A GPU will take maximum 16 lanes, and (for CUDA based application) minimum 8 lanes.
 
-Having only 16 lanes, those GPU need to divide them between the two GPU if you have two. This mean a 10% decrease in performance. **It is not an issue**. 
+Having only 16 lanes, those GPU need to divide them between the two GPU if you have two. This mean a 10% decrease in performance. **It is not an issue, and I believe that the next PCIE generation will enhance this**. 
 
 If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are i9 / Threadripper. However it is nearly twice the price of an i7 and the motherboard you will need is also more expensive.
 if you need 4+ GPU, there is still a way to do it using Xeon / Athlon processors. Motherboards that are compatible with those CPU are also able to fit two CPU. However, this come at a very high price (it seems however that used datacenter hardware is more affordable)
