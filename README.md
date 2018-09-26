@@ -26,7 +26,7 @@ Feel free to open an issue is there is any mistakes or any questions :)
 	- [Case](./HardwareforAI#case)
 	- [Other](./HardwareforAI#other)
 	- [OS](./HardwareforAI#os)
-- [TLDR: some build examples]()
+- [TLDR: some build examples](./HardwareforAI/blob/master/README.md#tldr-some-examples)
 
 **Some additionnal contents:**
 - [ASIC & SOC / Embedded systems](./HardwareforAI#asics--soc-embedded-systems)
