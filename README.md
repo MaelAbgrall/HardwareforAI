@@ -26,14 +26,20 @@ Feel free to open an issue is there is any mistakes or any questions :)
 	- [Case](./HardwareforAI#case)
 	- [Other](./HardwareforAI#other)
 	- [OS](./HardwareforAI#os)
+- [TLDR: some build examples]()
+
+**Some additionnal contents:**
 - [ASIC & SOC / Embedded systems](./HardwareforAI#asics--soc-embedded-systems)
 - [Youtubers to follow & Useful links](./HardwareforAI#youtubers-to-follow--useful-links)
 
 ## TODO list:
 	- Building guide
-	- Link for wattage calculators
 	- Deep learning asic & embedded chips
 	- Resize images & better diagrams
+
+## latest update:
+	- Added some configuration ideas
+	- modifications on storage
 
 ## I'm a beginner / I'm a student
 you don't need a powerful computer (unless you're a gamer).
@@ -348,12 +354,12 @@ the recommendation is:
 
 ![](./images/hdd.jpg)
 
-- If you have a little bit more money you can buy a SSD, but it's around 3 times / 4 times more expensive than a HDD. Your training time will be faster however since you will load nearly instantly your dataset from storage.
+- If you have a little bit more money you can buy a SSD, but it's around 3 times / 4 times more expensive than a HDD. Your training time will be faster however since you will load nearly instantly your dataset from storage. You still need to know that SSD has limited lifetime that is calculated in regard of the number of write. So to optimise the lifetime of an SSD, try to download only once your dataset, and avoid to modify it too often (for example changing the size of training/validation folder, and moving 20GB of images each time)
 
 ![](./images/ssd.jpeg)
 
 
-- M2 / NVME: This storage is even faster. However, depending of the motherboard, it will eat up your pcie lanes, so not really a good choice. Spend your money on more useful hardware.
+- M2 / NVME: This storage is even faster: instead of relying on SATA (data cables for SSD and HDD) they use pcie lanes. This mean very fast read/write, however, depending of the motherboard, it will eat cpu or chipset lanes (those lanes usually used for SATA 3), so not really a good choice depending of your motherboard. If you have ton of pcie lanes, this is still an improvement over SSD.
 
 ![](./images/m2.jpg)
 
@@ -447,6 +453,52 @@ if you plan to use Linux with a desktop, you will also need a mouse
 
 if you don't know which linux to take, this mean you have to go with ubuntu: it's an easy os for beginners in linux. It's also the official *most* supported distro.
 
+
+### TLDR: some examples
+If you don't want to read the previous parts... Well if you are in a hurry I can understand, but only you can design the best pc for your requirements.
+
+here is some ideas of entry level / medium / high level / ultimate workstation, with intel and AMD, if you didn't read the guide note that intel / amd board are not compatible and you should better invest in a ATX motherboard (prices are roughly estimated because this is changing everytime, this is also why I'm listing AMD and Intel)
+
+*entry level*
+	
+	AMD:
+	Ryzen 5
+	B chipset motherboard (like B350)
+	INTEL EQUIVALENT:
+	i5
+	B chipset motherboard (like B250)
+
+	8GB of ram
+	nvidia 1050 ti or more depending of your budget
+	HDD storage only
+
+*medium*
+	
+
+	Ryzen 7 / i7
+	B chipset motherboard
+
+	16GB of ram
+	1070/1080 ti
+	HDD storage only
+	if possible separate the HDD for your os and the one for data storage
+
+*high level*
+
+	Ryzen 7 / i7
+	B or H chipset
+	16-32 GB of Ram
+	one 2080 ti or two 1080 ti (at the moment, 1080 ti is still a better option because it's more than half cheaper and only 15% slower)
+	HDD / SSD, you must separate your OS from your data
+
+*ultimate workstation*
+
+	Threadripper / i9X
+	there is only one chipset: x399 for threadripper and x499 for i9X
+	64+ GB or ram
+	4+ GPUs (for this kind of budget, you need to select between more GFlops or more GPU, or both. You can also look in more specialized card like nvidia tesla, or titan cards)
+
+
 ## ASICS & SOC (embedded systems)
 Asic or Application Specific Integrated Circuit are processors redesigned for a specific task. The most known are Bitcoin mining asic that are very efficient for mining.
 
@@ -465,7 +517,7 @@ There is also embedded systems available (SOC or System on a Chip, like raspberr
 - ...
 
 ## Youtubers to follow & useful links
-**[PcPartPicker:](https://pcpartpicker.com/list/)** This is the most up to date database of hardware components, you can plan here a build an estimate your budget
+**[PcPartPicker:](https://pcpartpicker.com/list/)** This is the most up to date database of hardware components, you can plan here a build an estimate your budget. Another good point is that if you are doing something wrong, the website will warn you.
 
 
 **[Gamers Nexus:](https://www.youtube.com/user/GamersNexus)** This channel is serious about harware, the team here is doing a great job for reviewing thermals of components and really technical reviews, PCB explanation, tech news, etc.
