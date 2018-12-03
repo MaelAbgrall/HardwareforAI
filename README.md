@@ -3,8 +3,6 @@ This guide is intended for beginers in hardware, in order to plan what you need 
 
 Feel free to open an issue is there is any mistakes or any questions :)
 
-**note: I've built more than 10 computers and owned twice as much for lots of usages (HTPC, gaming, ultralight, servers, IOT device, etc), I'm also a huge fan of computer hardware, so I guess this guide is reliable ^^**.
-
 ## Table of content:
 - [I'm a beginner / I'm a student](./HardwareforAI#im-a-beginner--im-a-student)
 - [Laptop vs Cloud vs Prebuild vs Homemade](./HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
@@ -166,7 +164,7 @@ You can find all nvidia's gpu datasheet [here for 9xx series](https://en.wikiped
 
 of course, is you can afford one, the Titan V is well above the other cards in term of processing power.
 
-update: [https://www.pugetsystems.com/labs/hpc/NVIDIA-RTX-2080-Ti-vs-2080-vs-1080-Ti-vs-Titan-V-TensorFlow-Performance-with-CUDA-10-0-1247/](here) is a quick benchmark for 1080ti vs 2080 and 2080ti. Both ti version have 11Gb of DRAM while the 2080 only have 8Gb. And the 2080 & 2080ti have Tensorcores (usually found in the Titan V)
+update: [this link](https://www.pugetsystems.com/labs/hpc/NVIDIA-RTX-2080-Ti-vs-2080-vs-1080-Ti-vs-Titan-V-TensorFlow-Performance-with-CUDA-10-0-1247/) is a quick benchmark for 1080ti vs 2080 and 2080ti. Both ti version have 11Gb of DRAM while the 2080 only have 8Gb. And the 2080 & 2080ti have Tensorcores (usually found in the Titan V)
 
 Depending on the size of your datasets and the number of experiment you need to conduct at the same time, you can either go with one beefy GPU or two smaller ones (or if you can afford it, two big GPU).
 	
