@@ -40,6 +40,7 @@ Feel free to open an issue is there is any mistakes or any questions :)
 ## latest update:
 	- Added some configuration ideas
 	- modifications on storage
+	- benchmark link for 1080ti vs 2080/2080ti
 
 ## I'm a beginner / I'm a student
 you don't need a powerful computer (unless you're a gamer).
@@ -164,6 +165,8 @@ Processing power is usually constrained by the number of cuda cores, clock speed
 You can find all nvidia's gpu datasheet [here for 9xx series](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units#GeForce_900_series) and [here for the 10xx series](https://en.wikipedia.org/wiki/List_of_Nvidia_graphics_processing_units#GeForce_10_series)
 
 of course, is you can afford one, the Titan V is well above the other cards in term of processing power.
+
+update: [https://www.pugetsystems.com/labs/hpc/NVIDIA-RTX-2080-Ti-vs-2080-vs-1080-Ti-vs-Titan-V-TensorFlow-Performance-with-CUDA-10-0-1247/](here) is a quick benchmark for 1080ti vs 2080 and 2080ti. Both ti version have 11Gb of DRAM while the 2080 only have 8Gb. And the 2080 & 2080ti have Tensorcores (usually found in the Titan V)
 
 Depending on the size of your datasets and the number of experiment you need to conduct at the same time, you can either go with one beefy GPU or two smaller ones (or if you can afford it, two big GPU).
 	
