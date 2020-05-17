@@ -55,7 +55,7 @@ Before going any further, here is how I'm working with AI:
 ![ ](./images/x230.jpg  "the x230 is really small")
     *An idea of the size of the x230*
 - My main computer for heavy computation, photoshop and gaming. Its a 9900k (16 threads), 32GB of ram, and a 1080ti. It's running a dual boot with windows, and ubuntu.
-![](https://imgur.com/SXrSiJF "my main computer")
+![ ](https://imgur.com/SXrSiJF "my main computer")
 
 - The research dpt. of the uni I had my internship with had a xeon (32 threads), 64GB of ram and 4 titan xp and 5/6 people were working on this server.
 
