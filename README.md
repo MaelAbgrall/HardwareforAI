@@ -7,12 +7,8 @@ Feel free to open an issue is there is any mistakes or any questions :)
 **important note:** This guide will talk mostly about deep learning (even if I use the term AI). Machine learning algorithms do not need as much power as deep learning (you don't even need a GPU as far as I know)
 
 # Table of content:
-- [I'm a beginner / I'm a student](./HardwareforAI#im-a-beginner--im-a-student)
+- [I'm a beginner / I'm a student](https://github.com/MaelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
 - [Laptop vs Cloud vs Prebuild vs Homemade](./HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
-    - [Laptops](./HardwareforAI#pro-and-con-of-beefy-laptop)
-    - [Cloud computing](./HardwareforAI#cloud-computing)
-    - [Prebuild](./HardwareforAI#prebuild)
-    - [Homemade](.HardwareforAI#homemade)
 - [The bottom-up approach: What kind of harware exist, and how to choose it](./HardwareforAI#the-bottom-up-approach-what-kind-of-harware-exist-and-how-to-choose-it)
     - [Why GPU are so efficient ?](./HardwareforAI#why-gpu-are-so-efficient-)
     - [Choosing a GPU](./HardwareforAI#choosing-a-gpu)
@@ -45,33 +41,32 @@ Feel free to open an issue is there is any mistakes or any questions :)
     - benchmark link for 1080ti vs 2080/2080ti
 
 ## I'm a beginner / I'm a student
-Unless you like video games or studying AI, you don't need a powerful computer: a recent i3/Ryzen3 with an integrated graphic chip (iGPU or APU) is plenty for some docker containers &/or small programs.
+Unless you play video games, *you don't need a powerful computer*: a recent i3/Ryzen3 with an integrated graphic chip (iGPU or APU) is plenty for some docker containers &/or small programs. You will be surprised that most of the time cheap old hardware is very good.
 
-There is plenty of cloud-based solutions that will offer free computing power for a limited time. And even when you are out of free options, it is still a viable option to do quick computing.
+Once you need some power, there is plenty of cloud-based solutions that will offer free computing power for a limited time. And even when you are out of free options, it is still a viable option to do quick computing.
 
-# Laptop, Cloud, Prebuild & Homemade
-Before going any further, here is how I'm working with AI:
+# My setup
+Before going any further, here is how I'm working with AI/my home setp:
 
-- I have a small laptop with enough power to do some small computation or small software (like websites for example). It's a Thinkpad x230 with an i5 under Fedora, and it serves me well since 2012, it's ultra-light and very small. I might change it because I already upgraded it to its maximum (SSD, 16go of ram, changed the thermal paste) and it's not as snappy as a recent CPU such as a Ryzen 3.
+- **A laptop**: I have a small laptop with enough power to do some small computation or run small software (like a dev server for example). It's a Thinkpad x230 with an i5 under Fedora, and it serves me well since 2012, it's ultra-light and very small. I might change it because I already upgraded it to its maximum (SSD, 16go of ram, changed the thermal paste) and it's not as snappy as a recent CPU such as a Ryzen 3.
 ![ ](./images/x230.jpg  "the x230 is really small")
     *An idea of the size of the x230*
-- My main computer for heavy computation, photoshop and gaming. Its a 9900k (16 threads), 32GB of ram, and a 1080ti. It's running a dual boot with windows, and ubuntu.
+- **A tower:** My main computer for heavy computation, photoshop and gaming. Its a 9900k (16 threads), 32GB of ram, and a 1080ti. It's running a dual boot with windows, and ubuntu.
 ![ ](https://imgur.com/SXrSiJF.png "my main computer")
 
-- The research dpt. of the uni were I did my internship had a xeon (32 threads), 64GB of ram and 4 titan xp and 5/6 people were working on this server.
+- **My home server/streaming server:** a whooping dual core celeron t9400 with 2GB of ram. This thing **is OLD** (2008, not very powerful even for its time), however I can still run 18 docker containers: home assistant (HA, nodered, deconz), nextcloud (open source cloud storage), 2 mariadb instances, redis, nginx, an automated streaming server (ombi, jackett, jellyfin, etc), and finally portainer/glances to monitor all this. So far the only two limitations I had with this setup is when encoding a stream in 1080p at more than 10mbps, or when I'm uploading a huge number of files on nextcloud.
+![ ](https://imgur.com/9sQJLZU.png "my server")
+
+- **My previous work:** The research dpt. of the uni were I did my internship had a xeon (32 threads), 64GB of ram and 4 titan xp and 5/6 people were working on this server using ssh.
+
 
 When I'm not on my big computer, I'm using a combination of SSHFS, ssh tunnels and vscode with the remote ssh extension.
 
+# Laptop vs cloud vs tower
 ## the beefy gaming laptop
-Sadly, a lot of people out here recommend getting a gaming laptop for AI.
+Sadly, a lot of people out here recommend getting a gaming laptop for AI. While it is not bad advice, they are not great either. Those laptops are optimised for gaming on the go, not heavy computation. Choosing this will make you run very quickly into multiple limitations.
 
-While it is not bad advice, it is not great either. Those laptops are optimised for gaming on the go, not heavy computation. Choosing this will make you run very quickly into limitations.
-
-Why? If you did some thermal / energy engineering, you should probably know about the things I'll talk here.
-
-When you are running heavy computation (Games, AI, video rendering, etc) you are using a lot of power. Since our world is not perfect while doing this you lose some power in the form of heat (in electronics it's called TDP and it's in Watt)
-
-So, when you have a laptop, your "cooling potential" aka the size of the heat exchanger / Radiator is small. Thus your laptop fans will need to run full speed to dissipate this heat. And even at full speed, it's "optimised" so the laptop will wear faster than usual.
+When you are running heavy computation (Games, AI, video rendering, etc) you are using a lot of power. Since our world is not perfect while doing this you lose some power in the form of heat (in electronics it's called TDP and it's in Watt). So, when you have a laptop, your "cooling potential" aka the size of the heat exchanger / Radiator is small. Thus your laptop fans will need to run full speed to dissipate this heat. And even at full speed, it's "optimised" so the laptop will wear faster than usual.
 
 **pro:**
 - work without internet
@@ -86,36 +81,32 @@ So, when you have a laptop, your "cooling potential" aka the size of the heat ex
 - thermal overload (your computer will slow down to not break or burn, thus longer training)
 
 ## Cloud computing
-Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run, it becomes very expensive.
-
-**For companies (start-up and small ones)**, in case you didn't know, the most intensive part about AI is training a model. This is when you need a big computer with really powerful hardware. During prediction (for example when used by an end-user) the amazing thing is that you don't need powerful computers (yes, you can run a model on a mobile phone). So, again, for a small/medium team, building your computer is the most affordable case in the long run (>1y, do not use a DIY for an MVP). Since it's also a server used only by your team, you can easily protect it and maintain it (either by closing all ports from the outside and allowing only people on-site to work on the machine or by allowing ssh only with keys)
+Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run, it becomes extremely expensive.
+Please note that's I'm talking here about rented "cloud computing" (like GCP, AWS, etc), your server rack in the basement does not count as cloud computing.
 
 **pro:**
 - no need for maintenance (you can start training in less than 15min)
 - access to pro-level hardware is very cheap as long as you don't use it too much
-- easily scalable for large teams
 
 **con:**
-- the price depends on usage
+- the price depends on usage, in the long run this will become extremely expensive
 
 ## Pre-build
-Those computers are very powerful usually. There is two types of prebuilds: the ones by big companies (Asus, MSI, etc) and the ones built by smaller professionals (for example electronic hardware stores such as LDLC in France or Overclocker in the UK does that, but other very small companies can propose this too)
-
-Prebuilds from big companies are the same as the laptops: Those companies optimise the design to be powerful while staying cheap, so they share con with gaming laptops (apart for the price)
-
-Other prebuilds can be worth it, in essence, they are homemade computers built by someone else, the only thing is you need to pay the people who will build it, and sometimes you can't go with some particular options.
+Those computers are very powerful usually. There is two types of prebuilds: 
+-  the ones by big companies (Asus, MSI, etc): This can range from "gamer computers" (not very recommended) to server grade systems. Those are usually more expensives, but answer specific needs too. They are not the best in term of money/computation power.
+-  built by independent/small professionals (for example electronic hardware stores such as LDLC in France, Overclocker in the UK, Puget system in the US, but other very small companies can propose this too). Those are usually the same as homemade computers, except someone does it for you. Sometimes they do not propose as fine personalisations as you could do by yourself.
 
 ## Homemade
-The best option in my opinion. You will put only what you need on your computer, this will allow a very wise usage of your money.
+The best option in my opinion. You will put only what you need on your computer, this will allow a very wise usage of your money. They can also easily be upgraded
 
-For those afraid of building a computer: it's not difficult (if the cable don't fit, it's not the right cable), and it's not very time consuming (you need to plan maximum two days)
+For those afraid of building a computer: it's not difficult (if the cable don't fit, it's not the right cable), and it's not very time consuming (you need to plan maximum two days for your first time)
 
 **Pro:**
 - Only what you need
 - You can upgrade it as hardware is evolving (you only need to change a few parts, and keep 90% of your initial build)
 - Depending on the hardware, it can be silent, or extremely silent
 - It's very efficient because you will never have a thermal overload.
-- You can make a VERY powerful computer (aka 8 GPU)
+- You can make a VERY powerful computer (aka 8 GPU) for cheaper than premade, and about 10 to 20 times cheaper than a cloud option.
 - In the long run, the cheapest option
 
 **Con:**
@@ -124,11 +115,15 @@ For those afraid of building a computer: it's not difficult (if the cable don't 
 - you need a bit of time to check all the parts are compatibles
 - you need to install yourself the software needed
 - It's a vacuum cleaner, so you need some cleanup from time to time (it's not mandatory, but you can loose performance if it's too dusty)
+- If you are not working in the same place as this computer, you will need internet
 
 when you are using a homemade setup, if you are outside, you only need an internet connection and a small laptop to connect to it. You may even not need to buy a new laptop because you are probably reading this on a portable "computer" (aka something with a keyboard is enough).
 Even a Chromebook will be enough to work remotely.
 
 If you want to buy a new laptop, there are very good Linux laptops out here, Clevo notebooks are worth it (the original Alienware were built with Clevo notebooks), and some re-vendors like System 76 in the US are supporting Linux
+
+## side note
+In case you didn't know, the most intensive part about AI is training a model. This is when you need a big computer with really powerful hardware. During prediction (for example when used by an end-user) the amazing thing is that you don't need powerful computers (yes, you can run a model on a mobile phone). So, again, for a small/medium team, building your computer is the most affordable case in the long run (**NOT for an MVP, set up your business first!**). Since it's also a server used only by your team, you can easily protect it and maintain it (either by closing all ports from the outside and allowing only people on-site to work on the machine or by allowing ssh only with keys)
 
 # The bottom-up approach: What kind of hardware exists, and how to choose it
 To build a computer you will need at least a motherboard, a CPU, Ram, and storage (HDD / SSD / M2).
@@ -261,6 +256,8 @@ Basically:
 - ARM is usually (not all the time) more power-efficient.
 
 - x86 usually outperform ARM.
+
+- applications compiled for x86 will likely not work on ARM and vise versa. This is because some instructions (how the OS speaks to the processor) are different.
 
 ## Choosing a motherboard
 In the past, motherboards quality was very important. This is no longer the case. You still need to check some things
@@ -453,6 +450,8 @@ if you don't know which Linux to take, this means you have to go with ubuntu: it
 If you don't want to read the previous parts... Well if you are in a hurry I can understand, but only you can design the best pc for your requirements.
 
 here are some ideas of entry level/medium /high-level workstation, with intel and AMD, if you didn't read the guide note that intel / AMD board are not compatible and you should better invest in an ATX motherboard.
+
+**note: this guide was written in 2018, please take care to update the generation of hardware accordingly** 
 
 *entry level*
     
