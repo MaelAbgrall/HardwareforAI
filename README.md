@@ -1,33 +1,14 @@
 # Deep learning Hardware
 The goal of this guide is to teach how computer hardware works and what is important in deep learning.
-My only experience in AI so far is on personal projects and an internship in a research department of a university. So the recommendations section is made for a home-lab system or a small team.
+
+For my background: I'm an AI and software engineer, and while my only experience with AI is in a lab during internships, I'm currently the cofounder of a startup.
+
+I self learned AI in 2017 (right before the AI boom) and used it for personal projects as well as research projects (at the CMM of Mines ParisTech).
 
 Feel free to open an issue is there is any mistakes or any questions :)
 
 **important note:** This guide will talk mostly about deep learning (even if I use the term AI). Machine learning algorithms do not need as much power as deep learning (you don't even need a GPU as far as I know)
 
-# Table of content:
-- [I'm a beginner / I'm a student](https://github.com/MaelAbgrall/HardwareforAI#im-a-beginner--im-a-student)
-- [Laptop vs Cloud vs Prebuild vs Homemade](./HardwareforAI#laptop-vs-cloud-vs-prebuilt-vs-homemade)
-- [The bottom-up approach: What kind of harware exist, and how to choose it](./HardwareforAI#the-bottom-up-approach-what-kind-of-harware-exist-and-how-to-choose-it)
-    - [Why GPU are so efficient ?](./HardwareforAI#why-gpu-are-so-efficient-)
-    - [Choosing a GPU](./HardwareforAI#choosing-a-gpu)
-    - [Choosing a CPU](./HardwareforAI#choosing-a-cpu)
-    - [Choosing a motherboard](./HardwareforAI#choosing-a-motherboard)
-    - [RAM](./HardwareforAI#ram)
-    - [Storage](./HardwareforAI#storage)
-    - [Cooling the beast](./HardwareforAI#cooling-the-beast)
-    - [Power Supply](./HardwareforAI#psu)
-    - [LEDS](./HardwareforAI#led)
-    - [Fans](./HardwareforAI#fan)
-    - [Case](./HardwareforAI#case)
-    - [Other](./HardwareforAI#other)
-    - [OS](./HardwareforAI#os)
-- [TLDR: some build examples](https://github.com/MaelAbgrall/HardwareforAI/blob/master/README.md#tldr-some-examples)
-
-**Some additionnal contents:**
-- [ASIC & SOC / Embedded systems](./HardwareforAI#asics--soc-embedded-systems)
-- [Youtubers to follow & Useful links](./HardwareforAI#youtubers-to-follow--useful-links)
 
 ## TODO list:
     - Building guide
@@ -35,36 +16,26 @@ Feel free to open an issue is there is any mistakes or any questions :)
     - Resize images & better diagrams
     - update table of content
 
-## latest update:
-    - Added some configuration ideas
-    - modifications on storage
-    - benchmark link for 1080ti vs 2080/2080ti
-
-## I'm a beginner / I'm a student
-Unless you play video games, *you don't need a powerful computer*: a recent i3/Ryzen3 with an integrated graphic chip (iGPU or APU) is plenty for some docker containers &/or small programs. You will be surprised that most of the time cheap old hardware is very good.
-
-Once you need some power, there is plenty of cloud-based solutions that will offer free computing power for a limited time. And even when you are out of free options, it is still a viable option to do quick computing.
-
 # My setup
-Before going any further, here is how I'm working with AI/my home setp:
+Before going any further, here is how I'm working:
 
-- **A laptop**: I have a small laptop with enough power to do some small computation or run small software (like a dev server for example). It's a Thinkpad x230 with an i5 under Fedora, and it serves me well since 2012, it's ultra-light and very small. I might change it because I already upgraded it to its maximum (SSD, 16go of ram, changed the thermal paste) and it's not as snappy as a recent CPU such as a Ryzen 3.
+- **A laptop**: I have a small laptop with enough power to do some small computation or run small software (like a dev server for example). It's a Thinkpad x230 with an i5, and it serves me well since 2012, it's ultra-light and very small. I upgraded everything I could to squeeze as much performances as I could (SSD, 16go of ram, changed the thermal paste). I'm running Manjaro, but I had previously Fedora and Lubuntu.
 ![ ](./images/x230.jpg  "the x230 is really small")
     *An idea of the size of the x230*
 - **A tower:** My main computer for heavy computation, photoshop and gaming. Its a 9900k (16 threads), 32GB of ram, and a 1080ti. It's running a dual boot with windows, and ubuntu.
 ![ ](https://imgur.com/SXrSiJF.png "my main computer")
 
-- **My home server/streaming server:** a whooping dual core celeron t9400 with 2GB of ram. This thing **is OLD** (2008, not very powerful even for its time), however I can still run 18 docker containers: home assistant (HA, nodered, deconz), nextcloud (open source cloud storage), 2 mariadb instances, redis, nginx, an automated streaming server (ombi, jackett, jellyfin, etc), and finally portainer/glances to monitor all this. So far the only two limitations I had with this setup is when encoding a stream in 1080p at more than 10mbps, or when I'm uploading a huge number of files on nextcloud.
+- **My home server/streaming server:** a whooping dual core celeron t9400 with 2GB of ram. This thing **is OLD** (2008, not very powerful even for its time), however I can still run 18 docker containers. So far the only two limitations I had with this setup is when encoding a stream in 1080p at more than 10mbps, or when I'm uploading a huge number of files on nextcloud. This is also not very fast.
 ![ ](https://imgur.com/9sQJLZU.png "my server")
 
-- **My previous work:** The research dpt. of the uni were I did my internship had a xeon (32 threads), 64GB of ram and 4 titan xp and 5/6 people were working on this server using ssh.
+- **My lab internship:** The research department were I did my internship had a xeon (32 threads), 64GB of ram and 4 titan xp and 5/6 people were working on this server using ssh.
 
 
-When I'm not on my big computer, I'm using a combination of SSHFS, ssh tunnels and vscode with the remote ssh extension.
+When working, I'm using a combination of SSHFS, ssh tunnels and vscode with the remote ssh extension: this helps me leveraging the powerful tower, but coding on the go with my small laptop.
 
 # Laptop vs cloud vs tower
 ## the beefy gaming laptop
-Sadly, a lot of people out here recommend getting a gaming laptop for AI. While it is not bad advice, they are not great either. Those laptops are optimised for gaming on the go, not heavy computation. Choosing this will make you run very quickly into multiple limitations.
+Sadly, a lot of people out here recommend getting a gaming laptop for AI. They are not great. Those laptops are optimised for gaming on the go, not heavy computation. Choosing this will make you run very quickly into multiple limitations.
 
 When you are running heavy computation (Games, AI, video rendering, etc) you are using a lot of power. Since our world is not perfect while doing this you lose some power in the form of heat (in electronics it's called TDP and it's in Watt). So, when you have a laptop, your "cooling potential" aka the size of the heat exchanger / Radiator is small. Thus your laptop fans will need to run full speed to dissipate this heat. And even at full speed, it's "optimised" so the laptop will wear faster than usual.
 
@@ -81,20 +52,21 @@ When you are running heavy computation (Games, AI, video rendering, etc) you are
 - thermal overload (your computer will slow down to not break or burn, thus longer training)
 
 ## Cloud computing
-Cloud computing is a good option if you don't have a budget or if you are not serious about AI. However, in the long run, it becomes extremely expensive.
-Please note that's I'm talking here about rented "cloud computing" (like GCP, AWS, etc), your server rack in the basement does not count as cloud computing.
+Cloud computing is a good option if you don't have a budget or if you are just starting AI. However, in the long run, it becomes extremely expensive.
+Please note that's I'm talking here about rented "cloud computing" (like GCP, AWS, etc).
 
 **pro:**
 - no need for maintenance (you can start training in less than 15min)
 - access to pro-level hardware is very cheap as long as you don't use it too much
 
 **con:**
-- the price depends on usage, in the long run this will become extremely expensive
+- the price depends on usage, this is not a long term solution.
+
 
 ## Pre-build
-Those computers are very powerful usually. There is two types of prebuilds: 
--  the ones by big companies (Asus, MSI, etc): This can range from "gamer computers" (not very recommended) to server grade systems. Those are usually more expensives, but answer specific needs too. They are not the best in term of money/computation power.
--  built by independent/small professionals (for example electronic hardware stores such as LDLC in France, Overclocker in the UK, Puget system in the US, but other very small companies can propose this too). Those are usually the same as homemade computers, except someone does it for you. Sometimes they do not propose as fine personalisations as you could do by yourself.
+There is two types of prebuilds: 
+-  the ones by big companies (Asus, MSI, etc): This can range from "gamer computers" (not very recommended) to server grade systems. Those are usually more expensives, but answer specific needs too. They are not the best in term of money over computation power.
+-  built by independent/small professionals (for example electronic hardware stores such as LDLC in France, Overclocker in the UK, Puget system in the US, but other very small companies can propose this too). Those are usually the same as homemade computers, except someone does it for you. Sometimes they do not propose as much personalisation as you could do by yourself.
 
 ## Homemade
 The best option in my opinion. You will put only what you need on your computer, this will allow a very wise usage of your money. They can also easily be upgraded
@@ -102,32 +74,52 @@ The best option in my opinion. You will put only what you need on your computer,
 For those afraid of building a computer: it's not difficult (if the cable don't fit, it's not the right cable), and it's not very time consuming (you need to plan maximum two days for your first time)
 
 **Pro:**
+The best option in my opinion. You will put only what you need on your computer, this will allow a very wise usage of your money. They can also easily be upgraded
+
+For those afraid of building a computer: it's not difficult (if the cable don't fit, it's not the right cable), and it's not very time consuming (you need to plan maximum two days for your first time)
+
+**Pro:**
+
 - Only what you need
-- You can upgrade it as hardware is evolving (you only need to change a few parts, and keep 90% of your initial build)
+- You can upgrade it (you only need to change a few parts, and keep 90% of your initial build)
 - Depending on the hardware, it can be silent, or extremely silent
 - It's very efficient because you will never have a thermal overload.
 - You can make a VERY powerful computer (aka 8 GPU) for cheaper than premade, and about 10 to 20 times cheaper than a cloud option.
 - In the long run, the cheapest option
 
 **Con:**
-- It's very heavy
-- It's big
+
+- It's very heavy, you will need one to two people to move it
 - you need a bit of time to check all the parts are compatibles
 - you need to install yourself the software needed
-- It's a vacuum cleaner, so you need some cleanup from time to time (it's not mandatory, but you can loose performance if it's too dusty)
 - If you are not working in the same place as this computer, you will need internet
 
-when you are using a homemade setup, if you are outside, you only need an internet connection and a small laptop to connect to it. You may even not need to buy a new laptop because you are probably reading this on a portable "computer" (aka something with a keyboard is enough).
-Even a Chromebook will be enough to work remotely.
+While this type of computer is very heavy, as long as you have access to internet and a bit of knowledge on SSH, you don't need to bring this monster computer with you. A very small laptop (even a Chromebook) will be enough to work since you can remote control the big computer.
 
-If you want to buy a new laptop, there are very good Linux laptops out here, Clevo notebooks are worth it (the original Alienware were built with Clevo notebooks), and some re-vendors like System 76 in the US are supporting Linux
 
-## side note
-In case you didn't know, the most intensive part about AI is training a model. This is when you need a big computer with really powerful hardware. During prediction (for example when used by an end-user) the amazing thing is that you don't need powerful computers (yes, you can run a model on a mobile phone). So, again, for a small/medium team, building your computer is the most affordable case in the long run (**NOT for an MVP, set up your business first!**). Since it's also a server used only by your team, you can easily protect it and maintain it (either by closing all ports from the outside and allowing only people on-site to work on the machine or by allowing ssh only with keys)
+## I'm a beginner / I'm a student
+
+Do you play video games? If yes, build yourself a computer
+
+If you don't, *YOU DON'T NEED A POWERFUL COMPUTER*. Again, in my company, I'm running the whole stack of my MVP on a single, quad core, 2012 computer.
+
+Little computation is required by 90% of the software out here. Moreover, you will be surprised that most of the time cheap old hardware is very good.
+
+Once you need some power, there is plenty of cloud-based solutions that will offer free computing power for a limited time. And when you are out of free credits, a 2 hour instance for deep learning will always be cheaper.
+
+
+
+## I'm a startup business
+
+Up to you. For a proof of concept, a quick training on a cloud server with transfer learning will be enough. If you are building your MVP or your alpha, I would instead build my own computer.
+
+In general if your data science team is composed of 5 people or less, sharing a single big computer is going to be the least expensive option.
+
+
 
 # The bottom-up approach: What kind of hardware exists, and how to choose it
 To build a computer you will need at least a motherboard, a CPU, Ram, and storage (HDD / SSD / M2).
-Some CPU (Intel primarily) have integrated graphics. It's a very weak GPU, but it's enough for rendering a desktop environment and basic applications (Office, internet, etc).
+Some CPU (Intel primarily) have integrated graphics. Don't count on it for deep learning, it is too weak at the moment of writing.
 
 ## GPU
 ### Why GPUs are so efficient?
@@ -214,24 +206,29 @@ intel CPUs are usually called iX (i3/i5/i7/i9) AMD CPUs are usually called Ryzen
 
 You should check the generation of the CPU: newer CPUs are more efficient than older ones, this means reducing the electric bill, and better performances. Be careful i7 i5 Ryzen 5 / 7 is not the generation, it is the performance indicator.
     example:
+
 - i7 7700 is generation 7, with a perf. indicator of 7
 - i5 8600 is generation 8, with a perf. indicator of 5
 
 the performance scale is as follow:
     
+
     lesser CPU (celeron, etc) < i3 / Ryzen 3 < i5 / Ryzen 5 < i7 / Ryzen 7 < i9 / Ryzen 9
 
-AMD Threadrippers are not on this scale since they are not necessarily better than i9/R9, they have more core and a different way to communicate with the motherboard, but those core are slower than i9/R9.
+AMD Threadrippers are not on this scale since they are not necessarily better than i9/R9, they have more core and a different way to communicate with the motherboard, but those core are slower than i9/R9. You should use those special cpus (called HPC) when you really need their features (so the number of PCIE lanes, or lots of cores)
     
-Intel Xeon and AMD Athlon/Epyc are special kinds of CPU, usually expensive because they have features used mainly in datacenters (lots of core, but not very fast)
+Intel Xeon and AMD Athlon/Epyc are server grade CPUs, usually expensive because they have features used mainly in datacenters (lots of core, but not very fast). Buying them new is not recommended (or you know what you are doing, and this guide is not very helpful). Older versions refurbished can be interesting, just be careful about their processing power.
+
+At last, it is important to note that newer generation can sometimes offer a much better processing power. an i7 7700k is barely more powerful than an i3 of the 10th generation.
 
 ### PCIE Lanes
-the number of pcie lanes. Consumer-grade CPU will usually come with 16 lanes. PCIe lanes are the communication pipes between the CPU and the GPU. A GPU will take maximum 16 lanes, and (for CUDA based application) minimum 8 lanes.
+Consumer-grade CPU will usually come with 16 lanes. PCIe lanes are the communication pipes between the CPU and the GPU. A GPU will take maximum 16 lanes, and minimum 8 lanes.
 
-Having only 16 lanes, those GPU need to divide them between the two GPU if you have two. This means a 10% decrease in performance. **I believe that the next PCIe (generation 4) will enhance/remove this**. 
+Having only 16 lanes, if you plug two GPU, your processor will have to split them. This is a very tiny performance hit (less than 10%), however you need to ensure that the motherboard support this.
 
-If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU) Usually the only CPUs allowing enough lanes for 3+ GPUs are Threadrippers and datacenter CPUs. However, it is much more expensive than a i9/R9 and the motherboard you will need is also more expensive.
+If you need to plug more GPU, you need more lanes. Be careful though, splitting lanes is not even (for example the i7 X series have 28 lanes. However it is split in 16x 8x 4x, so you won't be able to put a third GPU).
 
+Usually the only CPUs allowing enough lanes for 3+ GPUs are Threadrippers and datacenter CPUs. However, it is much more expensive than a i9/R9 and the motherboard you will need is also more expensive.
 *Used datacenter hardware can also be interesting if you are on a budget since they have more PCIe lanes*
 
 *The following diagram is not accurate (we will see why later), but you get the idea about GPUs. This is a Threadripper*
@@ -244,7 +241,7 @@ If it's useful for gaming, it is a terrible idea for computation: Not only doing
 
 On top of that, this "feature" is a bit more expensive at intel since it requires K processors (more expensive) and Z motherboards (more expensive too)
 
-If you still want an overclockable CPU from intel: it won't harm your computation if you don't overclock it. And you can benefit from higher factory clock speed.
+It won't harm your computation to use an overclockable cpu. Just don't overclock it. And you can benefit from higher factory clock speed.
 
 ### General knowledge about CPU / good to know
 CPUs are mainly divided into two categories (but there is other of course): ARM chips that are present in most of the small 'computers' like phones or embedded systems, and x86 chips. 
@@ -304,7 +301,9 @@ check how many SATA port you can have on a motherboard (more SATA port = more dr
 
 Check also the fan connectors: If the motherboard doesn't have enough fan pin, don't worry, there are splitters available on internet for a really good price (2 / 5 $)
 
-at last, if you have no other choice than using wifi for the computer, check that the motherboard have wifi integrated, or else you will need to buy a separate expansion card or a dongle
+at last, if you have no other choice than using wifi for the computer, check that the motherboard have wifi integrated, or else you will need to buy a separate expansion card or a dongle.
+
+Finally make sure that the PCIe lanes are supporting multiple GPUs. If the first pcie slot is an x16 and the other one an x4, you will not be able to plug in a second GPU.
 
 ### Size:
 There are multiple standard sizes of motherboards: mini ITX (smallest), micro ATX (medium), ATX (large)
@@ -327,26 +326,25 @@ for example:
 
 Titan Xp *2: (12GB effective memory)
 
-    - minimum: 16 GB of ram (12GB sticks doesn't exists)
-
-    - recommended: 32 GB (same here, 24GB sticks does not exists)
+- mini: 16Gb (sticks of 12Gb don't exist)
+- recommended: 32Gb (sticks of 24Gb don't exist)
     
-Check at last their frequency: some ram can go fast (3200Hz +) but the downside is that it's not always supported by the motherboard (as for the CPU, you can easily find the maximum ram speed for every motherboard on the datasheet)
+The ram speed (2400hz, 3000hz, etc) is meaningless on intel, and don't have a big impact on ryzen. However choosing more than 2400Hz will require to use xmp profiles in your bios.
 
-At last, for compatibility, there is currently 4 generation or RAM, DDR1, 2, 3 and DDR4. **They are not backward compatible**
+At last, for compatibility, there is currently 4 generation or RAM, DDR1, 2, 3 and DDR4. They are not backward compatible.
+
+**IMPORTANT EDIT** There is now a 5th generation of ram. You need to be even more careful because they are still not backward compatible, but they will physically fit in DDR4 slots. If you mix them, you will break your hardware!
 
 ## Storage
 So, now you need some storage.
 There is 3 main type of storage, with different speed:
 HDD (hard disk drive) < SSD (solid state drive) < M2 (ss2 connected with motherboard pcie lanes)
 
-the recommendation is:
-
-- if you're on a tight budget, forget about SSD and M2. HDDs are slow but inexpensive.
+- HDDs, slow but cheap.
 
 ![](./images/hdd.jpg)
 
-- If you have a little bit more money you can buy an SSD, but it's around 3 times / 4 times more expensive than an HDD. Your training time will be faster however since you will load nearly instantly your dataset from storage. You still need to know that SSD has a limited lifetime that is calculated with the number of writes. So to optimise the lifetime of an SSD, try to download only once your dataset, and avoid to modify it too often (for example changing the size of training/validation folder, and moving 200GB of images each time)
+- If you have a little bit more money you can buy an SSD, but it's around 3 times / 4 times more expensive than an HDD. Your training time will be faster however.
 
 ![](./images/ssd.jpeg)
 
@@ -355,11 +353,9 @@ the recommendation is:
 
 ![](./images/m2.jpg)
 
-Game computers are usually using an SSD to boot and store the OS. It is not mandatory in Linux since it's usually faster than windows, and a headless Linux is much faster to boot (28s on a 7200rpm HDD for ubuntu, one of my teachers achieved to boot in less than 2 seconds). 
+A good way to leverage all this storage is to get a 150Gb+ SSD for your OS and a small dataset, and a bigger hard drive (1 - 2 Tb) for bigger datasets.
 
-However, if you plan to use this computer for another usage (going on internet, etc) an SSD would be a nice addition.
-
-It is recommended to use a separate drive for your os/boot and one or more for your data. Linux needs 50 GB of storage if you put a lot of things. You can also go with 20 GB.
+It is recommended to use a separate drive for your os/boot and one or more for your data. Linux needs 50 GB of storage on the root partition if you put a lot of things on it.
 
 ## Cooling the beast
 There are three main kinds of cooling available.
@@ -386,7 +382,9 @@ And just a side note: There is one cooler to rule them all: the Noctua NH-D15 is
 
 *try to put that in a laptop*
 
-As general advice, some of the latest air-cooled GPUs are also very good at keeping the temperature down even with multiple GPU. I do not recommend to go water-cooling for your first build, this is a little bit harder to set up than a regular pc and require to be very careful when designing it.
+As general advice, some of the latest air-cooled GPUs are also very good at keeping the temperature down even with multiple GPU. 
+
+I do not recommend to go water-cooling for your first build, this is a little bit harder to set up than a regular pc and require to be very careful when designing it. However if your system is too loud, this is an efficient (but expensive) way to silence it.
 
 You can expect the following temperatures:
 Air : CPU: ~50 °C / GPU: ~75 °C
@@ -413,9 +411,9 @@ You can find various calculators online. Be careful though, manufacturers tend t
 ### LED
 Some components are built with LED everywhere. As for all trends and gadgets, you will pay more for those, and sometimes the hardware (especially for fans) is weaker than other companies that don't use LEDs.
 
-This is important to know that most gamers are using Windows and not Linux. So most of the software required to personalise colours or simply switch those LEDs off are not supported on Linux. There is still open-source software to deal with it (I've found some things for Razer, MSI, and it seems that Gigabyte is using a bios setup for LEDs, thus not needing windows). Some component will be able to stay on a specified colour if you have a dual boot with windows (you can then choose the colour of all the LEDs and restart the computer on Linux).
+Most gamers are using Windows and not Linux. So the software required to control those LEDs are not supported on Linux.
 
-When LEDs are not set up, they will usually light up with a specific colour and pattern. The less funny part is that when you can't set up all those LEDs, it can turn your computer into an *-ugly-* stroboscopic rainbow.
+When LEDs are not set up, they will light up with a specific colour and pattern. The less funny part is that it can turn your computer into a stroboscopic rainbow.
 
 The easiest way is to avoid those components if possible. It will also reduce your power consumption.
 
@@ -426,14 +424,14 @@ There is two types of fan, PWM (4 pins) and DC (3 pins). There is no difference 
 - DC means the fan's motor will run more or less fast depending on the voltage given to the fan.
 - PWM means that the current pin will carry always 12V, and the PWM pin sends and receives the fan speed in RPM.
 
-Some motherboard can adapt to both types of fan, you only need to specify it in the bios.
+Most motherboards today support both types of fans, but you will need to set this up in the bios.
 
 If you want a reliable fan, you can go to Noctua, they are designing datacenter fan, and their guarantee is very good
 
 ## Case
-spend the rest of your budget on a case. Make sure it is well ventilated, or your computer will become noisy. This is kind of easy to spot (open front and open top since heat goes up). A recent trend was to put glass panel everywhere, so mind some cases that put a giant glass in front of the fan, thus making them useless.
+Spend the rest of your budget on a case. Make sure there is enough room to put your radiators and the motherboard. Mind also the GPU length.
 
-Make sure there is enough room to put your radiators and the motherboard. Mind also the GPU length.
+My personal favourite is the fractal define 7, it has loads of storage and this is a very silent case. Mind however that this is a "luxury" case and you can find cheaper than this.
 
 ## Other
 If you are using Linux headless, you will need at least for installation a keyboard and a monitor.
